@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ### NOTA user@Got8or2001:
 # Rapaziada eh o seguinte, pra vcs poderem manipular tudo instalem o  ---> 'Github Desktop' <--- ele vai reduzir a dor de cabeca de vcs.
+=======
+NOTA user@Its8or:
+Rapaziada eh o seguinte, pra vcs poderem manipular tudo instalem o  ---> 'Github Desktop' <--- ele vai reduzir a dor de cabeca de vcs.
+>>>>>>> 7683313aded8632e008e02b5ec5d1231cc612660
 
 la ja da pra manipular tudo sem muitas linhas de codigo, eh importante tbm vcs intalarem o ---> GIT <--- no pc pra vcs fazerem algumas coisinhas basicas do projeto, como pull request, branch, etc. 
 
