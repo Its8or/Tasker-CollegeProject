@@ -49,6 +49,13 @@ git pull origin master
         vai na pagina do github.com/Its8or/college-project
         aparece uma sessao 'Compare & pull request', entra nela faz a commit e faz o pedido.
 
+#### Caso dê algum erro(ou não):
+
+* push request para parear os arquivos local com a master
+git push
+
+------------------
+
 * Sai da branch e vai pra master de novo:
 git checkout master
 
