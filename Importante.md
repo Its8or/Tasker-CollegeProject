@@ -59,4 +59,3 @@ _**git branch -D [branch_usada]**_
 
 Agora, tudo que precisamos fazer eh por a mao na massa,
         BOA SORTE!
-
