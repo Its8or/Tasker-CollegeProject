@@ -14,7 +14,4 @@ The project will tell if the grouphad passed the subject or not.
 * **ex:** 'b_8or';
 
 #### 3. Nao use pontos ou caracteres especiais:
-* **ex:** '8or.2001' ou '8or#branch' 
-
-
-
+* **ex:** '8or.2001' ou '8or#branch';
