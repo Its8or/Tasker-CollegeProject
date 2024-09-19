@@ -30,7 +30,7 @@ _**git checkout -b [nome da branch: deem uma olhada nas regras pra nomear branch
 **_git add -A_**
 
 * commita a mudança, add texto descritivo: 
-**_git commit -m '[nome] alterou html e css'_**
+**_git commit -m 'alterou html e css'_**
   
 * upar as mudancas no GitHub pra n fazer cagada quando fizer a pull request: 
 **_git push -u origin [branch]_**
