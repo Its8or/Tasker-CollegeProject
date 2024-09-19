@@ -1,14 +1,5 @@
-<<<<<<< HEAD
 NOTA user@Its8or:
 Rapaziada eh o seguinte, pra vcs poderem manipular tudo instalem o  ---> 'Github Desktop' <--- ele vai reduzir a dor de cabeca de vcs.
->>>>>>> 7683313aded8632e008e02b5ec5d1231cc612660
-
-la ja da pra manipular tudo sem muitas linhas de codigo, eh importante tbm vcs intalarem o ---> GIT <--- no pc pra vcs fazerem algumas coisinhas basicas do projeto, como pull request, branch, etc. 
-=======
-###### NOTA user@Got8or2001:
-### Rapaziada eh o seguinte, pra vcs poderem manipular tudo instalem o  **---> 'Github Desktop' <---** ele vai reduzir a dor de cabeca de vcs.
-la ja da pra manipular tudo sem muitas linhas de codigo, eh importante tbm vcs intalarem o **---> GIT <---** no pc pra vcs fazerem algumas coisinhas basicas do projeto, como pull request, branch, etc. 
->>>>>>> a4d82cbae447b12f1c34ac618bd9cd5bef21d466
 
 fica a criterio de vcs e com o tempo vcs vao pegar o jeito com isso, caso interessados em aprender GIT vejam esse site:
 **---> https://learngitbranching.js.org/?locale=pt_BR <---**
