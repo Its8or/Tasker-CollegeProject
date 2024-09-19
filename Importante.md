@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-### NOTA user@Got8or2001:
-# Rapaziada eh o seguinte, pra vcs poderem manipular tudo instalem o  ---> 'Github Desktop' <--- ele vai reduzir a dor de cabeca de vcs.
-=======
 NOTA user@Its8or:
 Rapaziada eh o seguinte, pra vcs poderem manipular tudo instalem o  ---> 'Github Desktop' <--- ele vai reduzir a dor de cabeca de vcs.
 >>>>>>> 7683313aded8632e008e02b5ec5d1231cc612660
