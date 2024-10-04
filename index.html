@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
-    <title>Task Manager site</title>
+    <title>Gerenciador de Tarefas</title>
 </head>
 
 <body>
     <header>
-        <h1>Task Manager</h1>
+        <h1>Gerenciador de Tarefas</h1>
     </header>
 
     <main>
-        <div id="todo">
-            <h4>Todo.</h4>
-            <input type="text" name="todo-item" id="todo-item">
+        <div id="create-task">
+            <h4>Criar tarefa.</h4>
+            <div class="message">
+                <input type="text" name="content-item" id="content">
+                <button id="add-item">adicionar</button>
+                <button id="cancel-item">cancelar</button>
+            </div>
         </div>
+
+        <!-- 
+            a ideia no 'on-going' será mandar o conteudo de 'create-new' 
+            para ele e fazer aparecer numa caixa para marcar como concluido ou não 
+        -->
         <div id="on-going">
             <h4>Em progresso.</h4>
-            <input type="text" name="progress-item" id="progress-item">
-        </div>
-        <div id="create-new">
-            <h4>Criar atividade.</h4>
-            <input type="text" name="create-item" id="create-item">
+            <div id="task-ongoing">
+            </div>
         </div>
     </main>
 
     <footer>
         <h6>© todos os direitos reservados aos criadores.</h6>
+        <button type="button" hidden id="backtop"><a href="#body">▲</a></button>
     </footer>
 </body>
+
 </html>
