@@ -6,3 +6,22 @@
 body {
     background-color: #BCD;
 }
+
+header {
+    background-color: #788da2;
+    padding: 2%;
+}
+
+main {
+    padding: 20px;
+    & #create-task {
+        display: inline-block;
+        background-color: #9daebe;
+        padding: 10px;
+    }
+
+    & #on-going{
+        background-color: #9daebe;
+        width: calc();
+    }
+}
