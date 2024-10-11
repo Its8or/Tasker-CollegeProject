@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>Gerenciador de Tarefas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abas Simples</title>
+    <style>
+        .tab { display: none; }
+        .tab.active { display: block; }
+        .tablinks { cursor: pointer; padding: 10px; display: inline-block; }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Gerenciador de Tarefas</h1>
+    </header>
+    <div class="tablinks" onclick="abrirAba(event, 'aba1')">home </div>
+    <div class="tablinks" onclick="abrirAba(event, 'aba2')">criar novo</div>
+    <div class="tablinks" onclick="abrirAba(event, 'aba3')">eventos</div>
+    <div id="Aba1" class="tab active">
+    
+ </div>
+
+    <script>
+        function abrirAba(evt, nomeAba) {
+            var i, tab, tablinks;
+            tab = document.getElementsByClassName("tab");
+            for (i = 0; i < tab.length; i++) {
+                tab[i].classList.remove("active");
+            }
+            document.getElementById(nomeAba).classList.add("active");
+        }
+    </script>
+
+    <!-- Aqui é o header, não mexam nessa parte, exceto para 
+    adicionar algo, menu ou outro texto, etc.-->
+    
+
+    <!-- Mexam nessa bomba aqui pra baixo-->
+    <main>
+        <div id="create-task">
+            <h4>Criar tarefa.</h4>
+            <div class="message">
+                <input type="text" name="content-item" id="content">
+                <div class="inputs">
+                    <button id="add-item">adicionar</button>
+                    <button id="cancel-item">cancelar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+            a ideia no 'on-going' será mandar o conteudo de 'create-new' 
+            para ele e fazer aparecer numa caixa para marcar como concluido ou não 
+        -->
+        <div id="on-going">
+            <h4>Em progresso.</h4>
+            <div id="task-ongoing">
+            </div>
+        </div>
+
+        
+    </main>
+
+    <!-- Isso é o rodapé, mexa somente pra adicionar algo útil-->
+    <footer>
+        <h6>© todos os direitos reservados aos criadores.</h6>
+        <button type="button" hidden id="backtop"><a href="#body">▲</a></button>
+    </footer>
+</body>
+
+</html>
