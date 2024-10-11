@@ -9,19 +9,33 @@ body {
 
 header {
     background-color: #788da2;
-    padding: 2%;
+    padding: 10px 5px;
 }
 
 main {
     padding: 20px;
+    width: 50%;
+
     & #create-task {
-        display: inline-block;
         background-color: #9daebe;
         padding: 10px;
+        margin: 10px 0px;
+        
+        & #content{
+            width: 100%;
+        }
+        
+        & .inputs{
+            display:flex;
+            justify-content: center;
+        }
+        
     }
-
-    & #on-going{
+    
+    & #on-going {
         background-color: #9daebe;
-        width: calc();
+        padding: 10px;
+        margin: 10px 0px;
+
     }
 }
