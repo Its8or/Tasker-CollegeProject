@@ -6,44 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>Gerenciador de Tarefas</title>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abas Simples</title>
+    <title>Abas Editáveis Persistentes</title>
     <style>
-        .tab { display: none; }
-        .tab.active { display: block; }
-        .tablinks { cursor: pointer; padding: 10px; display: inline-block; }
-    </style>
+         /* aqui fica os Estilos das abas */ 
+        .tablinks {
+            cursor: pointer;
+            padding: 10px;
+            display: inline-block;
+            background-color: #788da2;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+            border-radius: 5px;
+        }
+
+        .tablinks.active {
+            background-color: #ddd;
+            font-weight: bold;
+            border-bottom: 3px solid #2196F3;
+        }
+
+        .tab {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-top: none;
+            margin-top: -1px;
+        }
+
+        .tab.active {
+            display: block;
+        }
+        
+        .content-area {
+            width: 100%;
+            height: 150px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        </style>
 </head>
 
 <body>
     <header>
         <h1>Gerenciador de Tarefas</h1>
     </header>
-    <div class="tablinks" onclick="abrirAba(event, 'aba1')">home </div>
-    <div class="tablinks" onclick="abrirAba(event, 'aba2')">criar novo</div>
-    <div class="tablinks" onclick="abrirAba(event, 'aba3')">eventos</div>
+    <!-- aqui fica os texto das abas  -->
+    <div class="tablinks active" onclick="abrirAba(event, 'Aba1')">home </div>
+    <div class="tablinks" onclick="abrirAba(event, 'Aba2')">criar novo</div>
+    <div class="tablinks" onclick="abrirAba(event, 'Aba3')">eventos</div>
+    <div class="tablinks" onclick="abrirAba(event, 'Aba4')">configurações</div>
+    <div class="tablinks" onclick="abrirAba(event, 'Aba5')">perfil</div>
+    
+    <!-- aqui voce conseguir modifica as abas tanto adiciona e editar  -->
     <div id="Aba1" class="tab active">
-    
- </div>
+        
+    <h1>seja bem vindo ao Gerenciador de tarefas </h1>
+    </div>
+    <div id="Aba2" class="tab">
+        <h2>Conteúdo da Aba 2</h2>
 
-    <script>
-        function abrirAba(evt, nomeAba) {
-            var i, tab, tablinks;
-            tab = document.getElementsByClassName("tab");
-            for (i = 0; i < tab.length; i++) {
-                tab[i].classList.remove("active");
-            }
-            document.getElementById(nomeAba).classList.add("active");
-        }
-    </script>
-
-    <!-- Aqui é o header, não mexam nessa parte, exceto para 
-    adicionar algo, menu ou outro texto, etc.-->
-    
-
-    <!-- Mexam nessa bomba aqui pra baixo-->
-    <main>
         <div id="create-task">
             <h4>Criar tarefa</h4>
             <div class="message">
@@ -54,16 +78,88 @@
                 </div>
             </div>
         </div>
-
-        <!-- 
-            a ideia no 'on-going' será mandar o conteudo de 'create-new' 
-            para ele e fazer aparecer numa caixa para marcar como concluido ou não 
-        -->
         <div id="on-going">
             <h4>Em progresso.</h4>
             <div id="task-ongoing">
             </div>
         </div>
+        </div>
+        
+        </div>
+        <div id="Aba3" class="tab">
+            <h2>Conteúdo da Aba 3</h2>
+            <textarea id="conteudoAba3" class="content-area" placeholder="Escreva algo na Aba 3..."></textarea>
+        </div>
+        <div id="Aba4" class="tab">
+            <h2>Conteúdo da Aba 4</h2>
+            <textarea id="conteudoAba4" class="content-area" placeholder="Escreva algo na Aba 4..."></textarea>
+        </div>
+        <div id="Aba5" class="tab">
+            <h2>Conteúdo da Aba 5</h2>
+            <textarea id="conteudoAba5" class="content-area" placeholder="Escreva algo na Aba 5..."></textarea>
+        </div>
+        <div id="Aba6" class="tab">
+            <h2>Conteúdo da Aba 6</h2>
+            <textarea id="conteudoAba6" class="content-area" placeholder="Escreva algo na Aba 6..."></textarea>
+        </div>
+    
+        <script>
+            
+            //  aqui armazena o conteúdo das abas temporariamente
+            var conteudos = {
+                'Aba1': '',
+                'Aba2': '',
+                'Aba3': '',
+                'Aba4': '',
+                'Aba5': '',
+                'Aba6': ''
+            };
+    
+            function abrirAba(evt, nomeAba) {
+                var i, tab, tablinks;
+    
+                // aqui no caso Salva o conteúdo da aba atual antes de mudar para outra
+                var abaAtual = document.querySelector(".tab.active");
+                if (abaAtual) {
+                    var textareaAtual = abaAtual.querySelector("textarea");
+                    if (textareaAtual) {
+                        conteudos[abaAtual.id] = textareaAtual.value; // aqui Salva o conteúdo digitado
+                    }
+                }
+    
+                // aqui Esconde todas as abas
+                tab = document.getElementsByClassName("tab");
+                for (i = 0; i < tab.length; i++) {
+                    tab[i].classList.remove("active");
+                }
+    
+                // aqui Remove a classe "active" de todas as abas
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].classList.remove("active");
+                }
+    
+                // aqui Mostra a aba selecionada e define como ativa
+                document.getElementById(nomeAba).classList.add("active");
+                evt.currentTarget.classList.add("active");
+    
+                // aqui Restaura o conteúdo salvo da aba selecionada
+                var textarea = document.getElementById("conteudo" + nomeAba);
+                textarea.value = conteudos[nomeAba];
+            }
+        </script>
+
+    <!-- Aqui é o header, não mexam nessa parte, exceto para 
+    adicionar algo, menu ou outro texto, etc.-->
+    
+
+    <!-- Mexam nessa bomba aqui pra baixo-->
+    <main>
+
+        <!-- 
+            a ideia no 'on-going' será mandar o conteudo de 'create-new' 
+            para ele e fazer aparecer numa caixa para marcar como concluido ou não 
+        -->
 
         
     </main>

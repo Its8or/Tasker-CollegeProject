@@ -6,15 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>Gerenciador de Tarefas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abas Simples</title>
+    <style>
+        .tab { display: none; }
+        .tab.active { display: block; }
+        .tablinks { cursor: pointer; padding: 10px; display: inline-block; }
+    </style>
 </head>
 
 <body>
-    <!-- Aqui é o header, não mexam nessa parte, exceto para 
-     adicionar algo, menu ou outro texto, etc.-->
     <header>
         <h1>Gerenciador de Tarefas</h1>
     </header>
+    <!-- aqui fica os texto das abas  -->
+    <div class="tablinks" onclick="abrirAba(event, 'aba1')">home </div>
+    <div class="tablinks" onclick="abrirAba(event, 'aba2')">criar novo</div>
+    <div class="tablinks" onclick="abrirAba(event, 'aba3')">eventos</div>
+    <div class="tablinks"></div>
+    <div id="Aba1" class="tab active">
+    
+ </div>
+<!-- aqui fica a fucionalidade -->
+    <script>
+        function abrirAba(evt, nomeAba) {
+            var i, tab, tablinks;
+            tab = document.getElementsByClassName("tab");
+            for (i = 0; i < tab.length; i++) {
+                tab[i].classList.remove("active");
+            }
+            document.getElementById(nomeAba).classList.add("active");
+        }
+    </script>
 
+    <!-- Aqui é o header, não mexam nessa parte, exceto para 
+    adicionar algo, menu ou outro texto, etc.-->
+    
 
     <!-- Mexam nessa bomba aqui pra baixo-->
     <main>
@@ -38,6 +66,8 @@
             <div id="task-ongoing">
             </div>
         </div>
+
+        
     </main>
 
     <!-- Isso é o rodapé, mexa somente pra adicionar algo útil-->
