@@ -1,10 +1,22 @@
+/* Companheiro Rafinha, sei que vai ser
+ dificil ler o css, eu tô achando tbm, mas
+ tu vai entender com o tempo */
+
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap');
+
+.georama-fonts {
+    font-family: "Georama", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
 * {
     margin: 0px;
     padding: 0px;
-}
-
-body {
-    background-color: #BCD;
+    font-family: "Georama";
 }
 
 header {
@@ -12,30 +24,98 @@ header {
     padding: 10px 5px;
 }
 
+.tablinks {
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+    /* LEMBRETE: quando corrigirem as tabs mudar/excluir isso  */
+    background-color: #788da2;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    border-radius: 5px;
+
+    &.active {
+        background-color: #ddd;
+        font-weight: bold;
+        border-bottom: 3px solid #2196F3;
+    }
+}
+
+
+.tab {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-top: -1px;
+
+    & .content-area {
+        width: 30px;
+        height: 70px;
+    }
+
+    &.active {
+        display: block;
+    }
+
+    & .content-area {
+        width: 100%;
+        height: 150px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+}
+
+body {
+    background-color: #BCD;
+}
+
 main {
-    padding: 20px;
-    width: 50%;
+    padding: 10px 20px;
+    width: calc(100%-30px);
 
     & #create-task {
         background-color: #9daebe;
         padding: 10px;
         margin: 10px 0px;
-        
-        & #content{
+
+        & .message {
+            padding: 0px;
+        }
+
+        & #content {
             width: 100%;
+            height: 35px;
+            resize: none;
+            overflow: hidden;
         }
-        
-        & .inputs{
-            display:flex;
-            justify-content: center;
+
+        & .inputs {
+            display: flex;
+            margin: 10px 0px 0px 0px;
+            gap: 20px;
+            /* justify-content: space-between; */
+
+            & button {
+                border: none;
+                padding: 6px;
+                border-radius: 8px;
+                background-color: #ddd;
+            }
         }
-        
+
     }
-    
+
     & #on-going {
         background-color: #9daebe;
         padding: 10px;
         margin: 10px 0px;
-
+        overflow: hidden;
     }
+}
+
+footer {
+
+    background-color: #788da2;
+    text-align: center;
 }
