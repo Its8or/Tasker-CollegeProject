@@ -5,68 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-    <title>Gerenciador de Tarefas</title>
+    <title>Exemplo de Navegação</title>
+    <style>
+        /* Estilos básicos para a navegação */
+        nav ul {
+            list-style-type: none; /* Remove os marcadores da lista */
+            padding: 0; /* Remove o preenchimento padrão da lista */
+            margin: 0;
+            text-align: center; /* Centraliza a lista de navegação */
+        }
+        
+        nav ul li {
+            display: inline-block; /* Exibe os itens de lista na mesma linha */
+            margin-right: 15px; /* Espaçamento entre os itens */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            color: #000; /* Cor do texto */
+        }
+
+        nav ul li a:hover {
+            color: #007bff; /* Cor ao passar o mouse */
+        }
+    </style>
 </head>
 
 <body>
+
     <header>
         <h1>Gerenciador de Tarefas</h1>
     </header>
+
     <!-- aqui fica os texto das abas  -->
-    <div class="tablinks" onclick="abrirAba(event, 'aba1')">home </div>
-    <div class="tablinks" onclick="abrirAba(event, 'aba2')">criar novo</div>
-    <div class="tablinks" onclick="abrirAba(event, 'aba3')">eventos</div>
-    <div class="tablinks"></div>
-    <div id="Aba1" class="tab active">
-    
- </div>
-<!-- aqui fica a fucionalidade -->
-    <script>
-        function abrirAba(evt, nomeAba) {
-            var i, tab, tablinks;
-            tab = document.getElementsByClassName("tab");
-            for (i = 0; i < tab.length; i++) {
-                tab[i].classList.remove("active");
-            }
-            document.getElementById(nomeAba).classList.add("active");
-        }
-    </script>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="criar.html">CRIAR NOVO</a></li>
+            <li><a href="perfil.html">PERFIL</a></li>
 
-    <!-- Aqui é o header, não mexam nessa parte, exceto para 
-    adicionar algo, menu ou outro texto, etc.-->
-    
-
-    <!-- Mexam nessa bomba aqui pra baixo-->
+        </ul>
+    </nav>
     <main>
-        <div id="create-task">
-            <h4>Criar tarefa.</h4>
-            <div class="message">
-                <input type="text" name="content-item" id="content">
-                <div class="inputs">
-                    <button id="add-item">adicionar</button>
-                    <button id="cancel-item">cancelar</button>
-                </div>
-            </div>
-        </div>
+        <h2>O que é um Gerenciador de Tarefas?</h1>
+        <p>
+            Um gerenciador de tarefas é uma ferramenta que ajuda você a organizar, priorizar e acompanhar todas as suas atividades, seja no trabalho, nos estudos ou no dia a dia. Com ele, você pode criar listas de tarefas, definir prazos e metas, acompanhar o progresso e garantir que nada fique para trás. Nosso Task Manager foi criado para oferecer simplicidade e eficiência, permitindo que você se concentre no que realmente importa.
+        </p>
 
-        <!-- 
-            a ideia no 'on-going' será mandar o conteudo de 'create-new' 
-            para ele e fazer aparecer numa caixa para marcar como concluido ou não 
-        -->
-        <div id="on-going">
-            <h4>Em progresso.</h4>
-            <div id="task-ongoing">
-            </div>
-        </div>
+    <h5>Como Usar
+        Usar o nosso Task Manager é simples e intuitivo. Siga estes passos básicos para começar:
+    </h5>
+<br>
 
-        
+<h4>Crie uma tarefa:</h4>
+<hr>
+Digite o que você precisa fazer, defina uma data de entrega e, se necessário, adicione uma prioridade.Acompanhe o progresso: Marque as tarefas como "em andamento" ou "concluídas" conforme avança.
+<h4>Organize suas tarefas:</h4> Use filtros para visualizar suas tarefas por prioridade, data ou status.
+colabore em equipe,Adicione membros à sua lista de tarefas e trabalhem juntos para atingir suas metas.
+Com nossa interface fácil de usar, você pode gerenciar desde projetos complexos até pequenas atividades diárias, garantindo que tudo seja feito no prazo.
+</hr>
+
+<br>
+
+<h2>Sobre a Equipe
+</h2>
+<p>Nossa equipe é formada por profissionais apaixonados por produtividade e tecnologia. Somos desenvolvedores, designers e especialistas em gerenciamento de projetos, unidos por um único objetivo: facilitar o seu dia a dia com ferramentas que realmente funcionam. Acreditamos que a organização é a chave para o sucesso, e trabalhamos para oferecer uma solução que atenda tanto às suas necessidades pessoais quanto profissionais.</p>
+
+
+
+</html>
+
+        </div>
     </main>
 
-    <!-- Isso é o rodapé, mexa somente pra adicionar algo útil-->
     <footer>
         <h6>© todos os direitos reservados aos criadores.</h6>
-        <button type="button" hidden id="backtop"><a href="#body">▲</a></button>
     </footer>
+    
+        
 </body>
 
 </html>

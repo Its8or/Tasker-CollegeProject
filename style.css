@@ -103,12 +103,12 @@ main {
                 background-color: #ddd;
             }
         }
-
     }
 
-    & #on-going {
-        background-color: #9daebe;
-        padding: 10px;
+/* Estilo do #on-going */
+main #on-going {
+    background-color: #9daebe;
+    padding: 10px;
         margin: 10px 0px;
         overflow: hidden;
     }
