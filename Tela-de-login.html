@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>Tela de login do site</title>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Aqui é um script massa que sugiro não mexer
+
+            // Obtém os valores dos campos de entrada
+            const email = document.querySelector('input[type="email"]').value;
+            const password = document.querySelector('input[type="password"]').value;
+
+            // Salva os dados no localStorage
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userPassword', password); // A senha talvez não tenha funcionalidade de fato como proteção de conta, mas para simplicidade é suficiente.
+
+            window.location.href = "http://127.0.0.1:3000/index.html"; // Redireciona para a página de perfil
+        }
+    </script>
+</head>
+<body>
+    <!-- Aqui pra baixo é onde a magia acontece.
+      O Usuario podera fazer um login, colocando dados basicos como Email e Senha(não precisa ser algo complexo)
+      E uma vez que o login for feito. Os dados (Como o email) serão salvos na aba de "Perfil" no site.-->
+    <div class="Tela de login"></div>
+    <div class="dados pessoais">
+        <h2 class="title">Bem vindo Usuario!</h2>
+        <div class="descrição">Você pode logar suas contas através das conexões abaixo</div>
+        <div class="social-media">
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=kqKDnZtOFYk">Discord</a></li>
+                <li><a href="https://youtu.be/MrsH9mfoQzc">Facebook</a></li>
+                <li><a href="https://www.youtube.com/watch?v=evlXhcs2-Qw">Telegram</a></li>
+            </ul>
+        </div>
+        <p class="descrição">ou caso preferir, coloque seus dados cadastrados abaixo:</p>
+        <form class="form" onsubmit="handleLogin(event)">
+            <input type="email" placeholder="email" required>
+            <input type="password" placeholder="senha" required>
+            <button type="submit">Entrar</button>
+            <a href="https://www.youtube.com/shorts/BZejBYcGag8">Redefinir senha</a>
+        </form>
+    </div>
+</body>
+</html>

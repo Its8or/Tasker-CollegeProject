@@ -19,6 +19,10 @@
     font-family: "Georama";
 }
 
+body {
+    background-color: #BCD;
+}
+
 header {
     background-color: #788da2;
     padding: 10px 5px;
