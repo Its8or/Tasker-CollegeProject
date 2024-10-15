@@ -1,6 +1,16 @@
 /* Companheiro Rafinha, sei que vai ser
  dificil ler o css, eu tô achando tbm, mas
- tu vai entender com o tempo */
+ tu vai entender com o tempo 
+*/
+
+/* 
+    Color scheme:
+     FFFFFF - branco
+     FD8D00 - laranja claro
+     5A3F1D - marrom claro
+     B36400 - laranja escuro
+     402400 - marrom escuro
+*/
 
 @import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -19,16 +29,18 @@
     font-family: "Georama";
 }
 
-body {
-    background-color: #BCD;
-}
-
 header {
-    background-color: #788da2;
+    background-color: #B36400;
     padding: 10px 5px;
 }
 
+body {
+    background-color: white;
+}
+
 nav {
+    background-color: #5A3F1D;
+
     & ul {
         list-style-type: none;
         /* Remove os marcadores da lista */
@@ -39,8 +51,10 @@ nav {
         /* Centraliza a lista de navegação */
 
         & li {
-            display: inline-block; /* Exibe os itens de lista na mesma linha */
-            margin-right: 15px; /* Espaçamento entre os itens */
+            display: inline-block;
+            /* Exibe os itens de lista na mesma linha */
+            margin-right: 15px;
+            /* Espaçamento entre os itens */
 
             & a {
                 text-decoration: none;
@@ -57,16 +71,33 @@ nav {
     }
 }
 
-body {
-    background-color: #BCD;
+.about {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #babab9;
+
+    & .how-to-use {
+        margin: 10px 0px 10px 20px;
+
+        & .itens {
+            margin: 10px 0px 10px 20px;
+
+            & #step {
+                margin-bottom: 5px;
+            }
+        }
+    }
 }
 
 main {
     padding: 10px 20px;
-    width: calc(100%-30px);
+    display: grid;
+    align-items: center;
 
     & #create-task {
-        background-color: #9daebe;
+        background-color: #B36400;
+        border-radius: 10px;
         padding: 10px;
         margin: 10px 0px;
 
@@ -91,14 +122,14 @@ main {
                 border: none;
                 padding: 6px;
                 border-radius: 8px;
-                background-color: #ddd;
             }
         }
     }
 
     /* Estilo do #on-going */
-    main #on-going {
-        background-color: #9daebe;
+    & #on-going {
+        background-color: #B36400;
+        border-radius: 10px;
         padding: 10px;
         margin: 10px 0px;
         overflow: hidden;
@@ -106,7 +137,10 @@ main {
 }
 
 footer {
-
-    background-color: #788da2;
+    background-color: #B36400;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     text-align: center;
+    height: 2.5rem;
 }
