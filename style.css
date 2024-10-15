@@ -28,45 +28,29 @@ header {
     padding: 10px 5px;
 }
 
-.tablinks {
-    cursor: pointer;
-    padding: 10px;
-    display: inline-block;
-    /* LEMBRETE: quando corrigirem as tabs mudar/excluir isso  */
-    background-color: #788da2;
-    border: 1px solid #ccc;
-    margin-right: 5px;
-    border-radius: 5px;
+nav {
+    & ul {
+        list-style-type: none;
+        /* Remove os marcadores da lista */
+        padding: 0;
+        /* Remove o preenchimento padrão da lista */
+        margin: 0;
+        text-align: center;
+        /* Centraliza a lista de navegação */
 
-    &.active {
-        background-color: #ddd;
-        font-weight: bold;
-        border-bottom: 3px solid #2196F3;
-    }
-}
+        & li {
+            & a {
+                text-decoration: none;
+                /* Remove o sublinhado dos links */
+                color: #000;
+                /* Cor do texto */
+            }
 
-
-.tab {
-    display: none;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-top: none;
-    margin-top: -1px;
-
-    & .content-area {
-        width: 30px;
-        height: 70px;
-    }
-
-    &.active {
-        display: block;
-    }
-
-    & .content-area {
-        width: 100%;
-        height: 150px;
-        border: 1px solid #ccc;
-        padding: 10px;
+            & a:hover {
+                color: #007bff;
+                /* Cor ao passar o mouse */
+            }
+        }
     }
 }
 
@@ -109,10 +93,10 @@ main {
         }
     }
 
-/* Estilo do #on-going */
-main #on-going {
-    background-color: #9daebe;
-    padding: 10px;
+    /* Estilo do #on-going */
+    main #on-going {
+        background-color: #9daebe;
+        padding: 10px;
         margin: 10px 0px;
         overflow: hidden;
     }

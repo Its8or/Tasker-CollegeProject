@@ -1,26 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="\style.css" media="screen" />
     <title>Tela de login do site</title>
-    <script>
-        function handleLogin(event) {
-            event.preventDefault(); // Aqui é um script massa que sugiro não mexer
 
-            // Obtém os valores dos campos de entrada
-            const email = document.querySelector('input[type="email"]').value;
-            const password = document.querySelector('input[type="password"]').value;
-
-            // Salva os dados no localStorage
-            localStorage.setItem('userEmail', email);
-            localStorage.setItem('userPassword', password); // A senha talvez não tenha funcionalidade de fato como proteção de conta, mas para simplicidade é suficiente.
-
-            window.location.href = "index.html"; // Redireciona para a página de perfil
-        }
-    </script>
 </head>
+
 <body>
     <!-- Aqui pra baixo é onde a magia acontece.
       O Usuario podera fazer um login, colocando dados basicos como Email e Senha(não precisa ser algo complexo)
@@ -43,6 +31,24 @@
             <button type="submit">Entrar</button>
             <a href="https://www.youtube.com/shorts/BZejBYcGag8">Redefinir senha</a>
         </form>
+
+        <script>
+            function handleLogin(event) {
+                event.preventDefault(); // Aqui é um script massa que sugiro não mexer
+
+                // Obtém os valores dos campos de entrada
+                const email = document.querySelector('input[type="email"]').value;
+                const password = document.querySelector('input[type="password"]').value;
+
+                // Salva os dados no localStorage
+                localStorage.setItem('userEmail', email);
+                localStorage.setItem('userPassword', password); // A senha talvez não tenha funcionalidade de fato como proteção de conta, mas para simplicidade é suficiente.
+
+                window.location.href = "index.html"; // Redireciona para a página de perfil
+            }
+        </script>
+
     </div>
 </body>
+
 </html>
