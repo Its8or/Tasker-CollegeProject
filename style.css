@@ -39,6 +39,9 @@ nav {
         /* Centraliza a lista de navegação */
 
         & li {
+            display: inline-block; /* Exibe os itens de lista na mesma linha */
+            margin-right: 15px; /* Espaçamento entre os itens */
+
             & a {
                 text-decoration: none;
                 /* Remove o sublinhado dos links */
