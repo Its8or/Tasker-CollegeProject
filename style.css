@@ -29,6 +29,10 @@
     font-family: "Georama";
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header {
     background-color: #B36400;
     padding: 10px 5px;
@@ -71,11 +75,16 @@ nav {
     }
 }
 
+/* Seção para HOME */
 .about {
     margin: 10px;
     padding: 20px;
     border-radius: 20px;
     background-color: #babab9;
+    flex-direction: column;
+    display: flex;
+    align-items: start;
+    justify-content: center;
 
     & .how-to-use {
         margin: 10px 0px 10px 20px;
@@ -89,6 +98,7 @@ nav {
         }
     }
 }
+/* FIM */
 
 main {
     padding: 10px 20px;
@@ -116,7 +126,6 @@ main {
             display: flex;
             margin: 10px 0px 0px 0px;
             gap: 20px;
-            /* justify-content: space-between; */
 
             & button {
                 border: none;
@@ -126,7 +135,6 @@ main {
         }
     }
 
-    /* Estilo do #on-going */
     & #on-going {
         background-color: #B36400;
         border-radius: 10px;
@@ -136,11 +144,13 @@ main {
     }
 }
 
+
+
 footer {
     background-color: #B36400;
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
-    height: 2.5rem;
+    height: 1.2rem;
 }
