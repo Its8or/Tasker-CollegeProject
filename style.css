@@ -29,8 +29,12 @@
     font-family: "Georama";
 }
 
-html{
+html {
     scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
 }
 
 header {
@@ -38,74 +42,10 @@ header {
     padding: 10px 5px;
 }
 
-body {
-    background-color: white;
-}
-
-.conteiner{
-    background-color: #e4e4df;
-    top: 250px;
-    left: 250px;
-    padding: 25px;
-    width: 300px;
-    height: 380px;
-    border-radius: 10px;
+.wrapper {
+    display: flex;
     flex-direction: column;
-    position: relative;
-    box-shadow: 0px 0px 20px 0 rgb(145, 142, 142);
-
-    & h2{
-        text-align: center;
-    }
-
-    & .descrição{
-        text-align: center;
-    }
-
-    & img{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-    }
-
-    & p{
-        text-align: center;
-    }
-
-    & ul{
-        text-align: center;
-        list-style-type: none;
-        margin: 10px 0px 10px 0px;
-    }
-
-    & input{
-        text-align: center;
-        height: 25px;
-        width: 96%;
-        margin: 15px 0px 0px 0px;
-        padding: 5px;
-        border-radius: 15px;
-        border: none;
-        font-size: 12px;
-        cursor: auto;
-    }
-
-    & h6{
-        padding: 5px 0px 0px 185px;
-    }
-
-    & button{
-        display: block;
-        width: 100%;
-        padding: 10px;
-        margin-top: 20px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 50px;
-        font-size: 15px;
-        cursor: pointer;
-    }
+    min-height: 100vh; /* Full viewport height */
 }
 
 nav {
@@ -141,6 +81,10 @@ nav {
     }
 }
 
+main, .about {
+    flex: 1;
+}
+
 /* Seção para HOME */
 .about {
     margin: 10px;
@@ -164,6 +108,7 @@ nav {
         }
     }
 }
+
 /* FIM */
 
 main {
@@ -210,6 +155,100 @@ main {
     }
 }
 
+.profile {
+    background-color: #babab9;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 400px;
+    padding: 20px;
+
+    & .dataTypes {
+        padding: 10px;
+
+        & .inputs {
+            & label {
+                display: flex;
+                flex-direction: column;
+                gap:2px;
+                margin: 5px 0px;
+
+                & input {
+                    border: none;
+                    height: 20px;
+                    border-radius: 10px;
+                    padding: 4px;
+                }
+            }
+        }
+    }
+}
+
+.conteiner {
+    background-color: #e4e4df;
+    top: 250px;
+    left: 250px;
+    padding: 25px;
+    width: 300px;
+    height: 380px;
+    border-radius: 10px;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 0px 20px 0 rgb(145, 142, 142);
+
+    & h2 {
+        text-align: center;
+    }
+
+    & .descrição {
+        text-align: center;
+    }
+
+    & img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    & p {
+        text-align: center;
+    }
+
+    & ul {
+        text-align: center;
+        list-style-type: none;
+        margin: 10px 0px 10px 0px;
+    }
+
+    & input {
+        text-align: center;
+        height: 25px;
+        width: 96%;
+        margin: 15px 0px 0px 0px;
+        padding: 5px;
+        border-radius: 15px;
+        border: none;
+        font-size: 12px;
+        cursor: auto;
+    }
+
+    & h6 {
+        padding: 5px 0px 0px 185px;
+    }
+
+    & button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+}
 
 
 footer {
