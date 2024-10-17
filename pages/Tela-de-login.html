@@ -6,34 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="\style.css" media="screen" />
     <title>Tela de login do site</title>
+    <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- Aqui pra baixo é onde a magia acontece.
       O Usuario podera fazer um login, colocando dados basicos como Email e Senha(não precisa ser algo complexo)
       E uma vez que o login for feito. Os dados (Como o email) serão salvos na aba de "Perfil" no site.-->
-      <div class="Tela de login"></div>
-      <div class="conteiner">
-          <h2 class="title">Bem vindo Usuario!</h2>
-          <div class="descrição">Você pode logar suas contas através das conexões abaixo</div>
-          <div class="social-media">
-              <ul>
-                  <li><a href="https://www.youtube.com/watch?v=kqKDnZtOFYk"> <img src="/images/logo.jpg"></a></li>
-                  <li><a href="https://youtu.be/MrsH9mfoQzc">Facebook</a></li>
-                  <li><a href="https://www.youtube.com/watch?v=evlXhcs2-Qw">Telegram</a></li>
-                </ul>
+
+<div class="tela-login">
+
+    <div class="bem-vindo">
+        <h1>Bem-vindo ao <br> TASKER!</h1>
+
+        <p>Estamos aqui para ajudar você a organizar suas tarefas diárias de forma simples e eficiente. Seja para gerenciar suas metas, planejar o seu dia ou priorizar o que realmente importa, nosso sistema foi criado para facilitar sua rotina e aumentar sua produtividade.</p>
+    </div>
+    
+    <div class="conteiner">
+        <h2 class="title">FAÇA O SEU LOGIN</h2>
+          
+        <form class="form" onsubmit="handleLogin(event)">
+              <input type="email" placeholder="email" required>
+              <input type="password" placeholder="senha" required>
+              <h6><a href="https://www.youtubse.com/shorts/BZejBYcGag8">Esqueceu sua senha?</a></h6>
+              
+              <button type="submit">Entrar</button>
+        </form>
+            
+            <div class="conect">OU CONECTE-SE VIA</div>
+    
+            <div class="social-media">
+                <a href="https://www.youtube.com/watch?v=kqKDnZtOFYk"> <img src="/images/discord.webp"></a>
+    
+                <a href="https://youtu.be/MrsH9mfoQzc"> <img src="/images/facebook.png"></a>
+    
+                <a href="https://www.youtube.com/watch?v=evlXhcs2-Qw"> <img src="/images/telegram.png"></a>
             </div>
-            <p class="descrição">ou caso preferir, coloque seus dados cadastrados abaixo:</p>
-            <form class="form" onsubmit="handleLogin(event)">
-                <input type="email" placeholder="email" required>
-                <input type="password" placeholder="senha" required>
-                <h6><a href="https://www.youtubse.com/shorts/BZejBYcGag8">Esqueceu sua senha?</a></h6>
-                <button type="submit">Entrar</button>
-            </form>
+    
+        <script src="/script/login.js"></script>
             
-            <script src="/script/login.js"></script>
-            
-        </div>
+    </div>
+
+</div>
+
 </body>
 
 </html>
