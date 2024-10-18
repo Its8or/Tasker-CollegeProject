@@ -24,20 +24,25 @@
         </nav>
     
         <div class="profile">
-            <div class="show">
+            <aside>
                 <h1>Perfil do Usuário</h1>
-                <img id="profilePic" src="/images/profile-pic.png" alt="Foto de perfil" />
-            </div>
+            </aside>
             <div class="dataTypes">
                 <h2>Editar Dados</h2>
                 <p><strong>Email:</strong> <span id="email">carregando...</span></p>
                 <div class="inputs">
-                    <label>
-                        Nome <input type="text" id="name" />
-                        Data de Nascimento <input type="date" id="birthdate" />
-                        <img id="profilePic" src="/images/profile-pic.png" alt="Foto de perfil" />
-                        Foto de Perfil <input type="file" id="profilePicInput" accept="image/*" onchange="saveUserData()" />
-                    </label>
+                    <form action="GET">
+                        <label>
+                            Nome <input type="text" id="name" />
+                        </label>
+                        <label>
+                            Data de Nascimento <input type="date" id="birthdate" />
+                        </label>
+                            <img id="profilePic" src="/images/profile-pic.png" alt="Foto de perfil" />
+                        <label>
+                            Foto de Perfil <input type="file" id="profilePicInput" accept="image/*" onchange="saveUserData()" />
+                        </label>
+                    </form>
                     
                     <h3>Visualização da Foto de Perfil:</h3>
                     <div class="buttons">
