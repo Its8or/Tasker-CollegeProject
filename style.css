@@ -34,7 +34,7 @@ html {
 }
 
 body {
-    background-color: #0A0A0A;
+    background-color: black;
 }
 
 header {
@@ -158,7 +158,7 @@ main {
     }
 }
 
-img {
+#profilePic {
     height: 150px;
     width: 150px;
     object-fit: cover;
