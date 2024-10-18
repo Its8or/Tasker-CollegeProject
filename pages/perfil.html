@@ -24,31 +24,29 @@
         </nav>
     
         <div class="profile">
-            <h1>Perfil do Usuário</h1>
+            <div class="show">
+                <h1>Perfil do Usuário</h1>
+                <img id="profilePic" src="/images/profile-pic.png" alt="Foto de perfil" />
+            </div>
             <div class="dataTypes">
                 <h2>Editar Dados</h2>
                 <p><strong>Email:</strong> <span id="email">carregando...</span></p>
                 <div class="inputs">
                     <label>
                         Nome <input type="text" id="name" />
-                    </label>
-    
-                    <label>
                         Data de Nascimento <input type="date" id="birthdate" />
-                    </label>
-    
-                    <label>
+                        <img id="profilePic" src="/images/profile-pic.png" alt="Foto de perfil" />
                         Foto de Perfil <input type="file" id="profilePicInput" accept="image/*" onchange="saveUserData()" />
                     </label>
-    
+                    
                     <h3>Visualização da Foto de Perfil:</h3>
-                    <img id="profilePic" src="/images/profile-pic.png" alt="Foto de perfil" width="100" />
+                    <div class="buttons">
+                        <button onclick="saveUserData()">Salvar</button>
+                        <button onclick="logout()">Logout</button>
+                    </div>
+                    
                 </div>
             </div>
-    
-            <button onclick="saveUserData()">Salvar</button>
-            <button onclick="logout()">Logout</button>
-    
         </div>
     
         <footer>
