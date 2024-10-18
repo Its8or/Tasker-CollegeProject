@@ -5,11 +5,12 @@
 
 /* 
     Color scheme:
-     FFFFFF - branco
-     FD8D00 - laranja claro
-     5A3F1D - marrom claro
-     B36400 - laranja escuro
-     402400 - marrom escuro
+    Jet Black (#0A0A0A)
+    Charcoal (#2C2C2C) 
+    Slate Gray (#4F4F4F) 
+    Gunmetal (#1F2329)
+    Neon Blue (#00FFFF)
+    White Smoke (#F5F5F5)
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap');
@@ -30,19 +31,21 @@
 
 html {
     scroll-behavior: smooth;
+
     & body {
-        background-color: rgb(27, 26, 26);
-        color: ghostwhite;
+        background-color: #0A0A0A;
+        color: #e8e4e4;
     }
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
 
 header {
-    background-color: #B36400;
+    background-color: #1F2329;
     padding: 10px 5px;
 }
 
@@ -58,12 +61,13 @@ main,
 }
 
 nav {
-    background-color: #5A3F1D;
+    background-color: #1F2329;
+    padding: 2px;
 
     & ul {
         list-style-type: none;
-        padding: 0;
-        margin: 0;
+        padding: 0px;
+        margin: 0px;
         text-align: center;
 
         & li {
@@ -72,11 +76,11 @@ nav {
 
             & a {
                 text-decoration: none;
-                color: ghostwhite;
+                color: #4F4F4F;
             }
 
             & a:hover {
-                color: rgba(255, 255, 255, 0.467);
+                color: #F5F5F5;
             }
         }
     }
@@ -84,7 +88,7 @@ nav {
 
 /* Seção para HOME */
 .about {
-    background-color: #3b3b3b;
+    background-color: #1F2329;
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -105,6 +109,7 @@ nav {
         }
     }
 }
+
 /* FIM */
 
 main {
@@ -113,7 +118,7 @@ main {
     align-items: center;
 
     & #create-task {
-        background-color: #B36400;
+        background-color: #131619;
         border-radius: 10px;
         padding: 10px;
         margin: 10px 0px;
@@ -124,7 +129,9 @@ main {
 
         & #content {
             width: 100%;
-            height: 35px;
+            height: 25px;
+            border-radius: 15px;
+            border: none;
             resize: none;
             overflow: hidden;
         }
@@ -143,7 +150,7 @@ main {
     }
 
     & #on-going {
-        background-color: #B36400;
+        background-color: #131619;
         border-radius: 10px;
         padding: 10px;
         margin: 10px 0px;
@@ -154,110 +161,121 @@ main {
 /* Perfil section */
 .profile {
     display: flex;
-    padding: 20px 10px;
-    
+    flex-direction: row;
+
+    & aside {
+        padding: 10px 20px;
+        background-color: #131619;
+    }
+
     & .dataTypes {
-        padding: 0px 10px;
-        
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 20px;
+
         & .inputs {
             display: flex;
             flex-direction: column;
-            
-            & img {
-                height: 100px;
-                width: 100px;
-                object-fit: cover;
-                border-radius: 50%;
+            padding: 20px 0px;
+
+            & form {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                & h3 {
+                    padding-top: 5px;
+                }
+
+                & label {
+                    & #name {
+                        background-color: #4F4F4F;
+                        border-radius: 20px;
+                        border: none;
+                        height: 20px;
+                    }
+
+                    & #birthdate {
+                        border-radius: 25px;
+                        border: none;
+                        height: 20px;
+                        background-color: #4F4F4F;
+                        color: #0A0A0A;
+                        height: 20px;
+                    }
+                }
+
+                & img {
+                    height: 100px;
+                    width: 100px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+
+                & #profilePic {
+                    height: 150px;
+                    width: 150px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
             }
         }
     }
 }
 
-#profilePic {
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-}
 /* FIM */
 
 /* parte de login */
-/* fundo */
-.fundo{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;;
-}
-
-.fundo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.2);
-}
-/* fim (fundo) */
 
 .tela-login {
-    margin: 0 auto;
     display: flex;
-    width: 90%;
-    max-width: 900px;
-    height: 450px;
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: 0px 0px 10px white;
-    overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
 
+    /* parte esquerda */
 
-    /* Parte esquerda */
     & .bem-vindo {
         flex: 1;
-        background-color: #20201c;
+        background-color: #fd8b0069;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         text-align: center;
-        padding: 60px;
+        padding: 40px;
     }
 
     & h1 {
         font-size: 50px;
         margin-bottom: 10px;
-        color: #f8f5f5;
+        color: #000000;
     }
 
     & p {
         text-align: center;
         font-size: 16px;
         line-height: 1.5;
-        color: #f8f5f5;
+        color: #000000;
     }
 
-    /* Parte direita */
+    /* fim da parte esquerda */
+
+    /* parte direita */
+
     & .conteiner {
         flex: 1;
-        background-color: #f1ebe3;
+        background-color: #fff2e0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 1px;
+        padding: 4px;
     }
 
     & h2 {
         text-align: center;
         font-size: 32px;
         margin-bottom: 10px;
-        color: #161615;
     }
 
     & form {
@@ -270,27 +288,16 @@ main {
     }
 
     input {
-        width: 100%;
-        max-width: 300px;
+        width: 300px;
         padding: 10px;
         border: none;
-        background-color: #d8d5cf;
+        background-color: #d3d1d1;
         border-radius: 100px;
         font-size: 15px;
     }
 
     & .conect {
         padding: 25px 0px 10px 0px;
-        color: #161615;
-    }
-
-    & h6{
-        align-self: flex-end;
-        font-size: 14px;
-        color: #333;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        margin-right: 0px;
     }
 
     & a {
@@ -307,22 +314,23 @@ main {
 
     & button {
         padding: 10px;
-        width: 100%;
-        max-width: 300px;
-        background-color: #161615;
+        width: 300px;
+        background-color: #000000;
         color: white;
         border: none;
         border-radius: 100px;
         cursor: pointer;
         font-size: 16px;
     }
+
+    /* fim da parte direita */
 }
 
 /* final da parte de login */
 
 
 footer {
-    background-color: #B36400;
+    background-color: #1F2329;
     position: absolute;
     bottom: 0;
     width: 100%;
