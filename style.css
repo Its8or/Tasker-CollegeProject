@@ -31,7 +31,7 @@
 html {
     scroll-behavior: smooth;
     & body {
-        background-color: black;
+        background-color: rgb(27, 26, 26);
         color: ghostwhite;
     }
 }
@@ -182,56 +182,82 @@ main {
 /* FIM */
 
 /* parte de login */
+/* fundo */
+.fundo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;;
+}
+
+.fundo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.2);
+}
+/* fim (fundo) */
 
 .tela-login {
+    margin: 0 auto;
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    width: 90%;
+    max-width: 900px;
+    height: 450px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px white;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    /* parte esquerda */
 
+    /* Parte esquerda */
     & .bem-vindo {
         flex: 1;
-        background-color: #fd8b0069;
+        background-color: #20201c;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         text-align: center;
-        padding: 40px;
+        padding: 60px;
     }
 
     & h1 {
         font-size: 50px;
         margin-bottom: 10px;
-        color: #000000;
+        color: #f8f5f5;
     }
 
     & p {
         text-align: center;
         font-size: 16px;
         line-height: 1.5;
-        color: #000000;
+        color: #f8f5f5;
     }
 
-    /* fim da parte esquerda */
-
-    /* parte direita */
-
+    /* Parte direita */
     & .conteiner {
         flex: 1;
-        background-color: #fff2e0;
+        background-color: #f1ebe3;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 4px;
+        padding: 1px;
     }
 
     & h2 {
         text-align: center;
         font-size: 32px;
         margin-bottom: 10px;
+        color: #161615;
     }
 
     & form {
@@ -244,16 +270,27 @@ main {
     }
 
     input {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         padding: 10px;
         border: none;
-        background-color: #d3d1d1;
+        background-color: #d8d5cf;
         border-radius: 100px;
         font-size: 15px;
     }
 
     & .conect {
         padding: 25px 0px 10px 0px;
+        color: #161615;
+    }
+
+    & h6{
+        align-self: flex-end;
+        font-size: 14px;
+        color: #333;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        margin-right: 0px;
     }
 
     & a {
@@ -270,16 +307,15 @@ main {
 
     & button {
         padding: 10px;
-        width: 300px;
-        background-color: #000000;
+        width: 100%;
+        max-width: 300px;
+        background-color: #161615;
         color: white;
         border: none;
         border-radius: 100px;
         cursor: pointer;
         font-size: 16px;
     }
-
-    /* fim da parte direita */
 }
 
 /* final da parte de login */
