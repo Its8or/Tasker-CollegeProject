@@ -26,6 +26,12 @@
         <div class="profile">
             <aside>
                 <h1>Perfil do Usuário</h1>
+                <p>perguntas frequentes:</p>
+                <ul>
+                    <li><a href="#">como usar o gerenciador?</a></li>
+                    <li><a href="#">como mudar minha senha?</a></li>
+                    <li><a href="#">tarefas sumiram, como consertar?</a></li>
+                </ul>
             </aside>
             <div class="dataTypes">
                 <h2>Editar Dados</h2>
@@ -33,15 +39,20 @@
                     <form action="GET">
                         <p><strong>Email:</strong> <span id="email">carregando...</span></p>
                         <label>
-                            Nome <input type="text" id="name" />
+                            <p>Nome: <small>(evite caracteres especiais)</small></p>
+                            <input type="text" id="name" />
                         </label>
                         <label>
-                            Data de Nascimento <input type="date" id="birthdate" />
+                            <p>Data de Nascimento:</p>
+                            <input type="date" id="birthdate"/>
                         </label>
                         <h3>Visualização da Foto de Perfil:</h3>
-                        <p>Foto de Perfil</p>
                         <label>
+                        <p>Foto de Perfil</p>
+                        <div id="profilePicture">
+                            <span>Escolha um arquivo</span>
                             <input type="file" id="profilePicInput" accept="image/*" onchange="saveUserData()" />
+                        </div>
                         </label>
                         <img id="profilePic" src="/images/profile-pic.png" alt="Foto de perfil" />
                     </form>

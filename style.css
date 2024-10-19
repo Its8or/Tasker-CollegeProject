@@ -1,8 +1,3 @@
-/* Companheiro Rafinha, sei que vai ser
- dificil ler o css, eu tô achando tbm, mas
- tu vai entender com o tempo 
-*/
-
 /* 
     Color scheme:
     Jet Black (#0A0A0A)
@@ -163,11 +158,35 @@ main {
     display: flex;
     flex-direction: row;
 
+    /* Sidebar */
     & aside {
-        padding: 10px 20px;
         background-color: #131619;
+        padding: 10px 20px;
+
+        & h1 {
+            margin-bottom: 10px;
+        }
+
+        & ul {
+            padding: 0px 20px;
+
+            & li {
+
+                & a {
+                    text-decoration: none;
+                    color: #4F4F4F;
+                }
+
+                & a:hover {
+                    color: #F5F5F5;
+                }
+            }
+        }
     }
 
+    /* FIM sidebar */
+
+    /* EDIT Data Sec. */
     & .dataTypes {
         width: 100%;
         padding: 10px 20px;
@@ -188,20 +207,46 @@ main {
                 }
 
                 & label {
+                    padding: 5px 0px;
+
+                    & p {
+                        & small {
+                            color: #4F4F4F;
+                            font-size: 15px;
+                        }
+                    }
+
+
                     & #name {
                         background-color: #4F4F4F;
                         border-radius: 20px;
+                        cursor: text;
+                        height: 15px;
                         border: none;
-                        height: 20px;
                     }
 
                     & #birthdate {
-                        border-radius: 25px;
-                        border: none;
-                        height: 20px;
                         background-color: #4F4F4F;
                         color: #0A0A0A;
-                        height: 20px;
+                        border-radius: 25px;
+                        cursor: pointer;
+                        border: none;
+                        height: 10px;
+                        height: 15px;
+                    }
+
+                    & #profilePicture {
+                        background-color: #4F4F4F;
+                        display: grid;
+                        font-size: 20px;
+                        border-radius: 20px;
+                        width: fit-content;
+                        padding: 5px 10px;
+                        cursor: pointer;
+
+                        & #profilePicInput {
+                            display: none;
+                        }
                     }
                 }
 
@@ -218,15 +263,25 @@ main {
                     object-fit: cover;
                     border-radius: 50%;
                 }
+
+                & .buttons {
+                    cursor: pointer;
+                }
             }
         }
     }
+
+    /* FIM EDIT DATA sec. */
 }
 
 /* FIM */
 
+
 /* TELA DE LOGIN */
 /* FUNDO */
+
+/* tenta colocar do jeito que eu tô fazendo, fica menos confuso. (heitor) */
+
 .fundo {
     position: fixed;
     top: 0;
@@ -243,6 +298,7 @@ main {
     object-fit: cover;
     filter: brightness(0.2);
 }
+
 /* FIM DO FUNDO */
 
 .tela-login {
@@ -261,6 +317,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 /* LADO ESQUERDO */
 .bem-vindo {
     flex: 1 1 50%;
@@ -295,6 +352,7 @@ main {
     line-height: 1.5;
     color: #f8f5f5;
 }
+
 /* FIM DO LADO ESQUERDO */
 
 /* LADO DIREITO */
@@ -371,17 +429,18 @@ input {
     cursor: pointer;
     font-size: 16px;
 }
+
 /* FIM DO LADO DIREITO */
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .tela-login {
         flex-direction: column;
         height: auto;
     }
-    
+
     .bem-vindo {
         padding: 10px;
-        
+
         .conteiner {
             padding: 10px;
             height: auto;
