@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="\style.css" media="screen" />
-    <title>Tela de login do site</title>
-    <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <!-- Aqui pra baixo é onde a magia acontece.
-      O Usuario podera fazer um login, colocando dados basicos como Email e Senha(não precisa ser algo complexo)
-      E uma vez que o login for feito. Os dados (Como o email) serão salvos na aba de "Perfil" no site.-->
-      
-      <div class="fundo"><img src="/images/Acesse sua Conta.png"></div>
-
-    <div class="wrapper">
-
-        <div class="tela-login">
-
-            <div class="bem-vindo">
-                <h1>Bem-vindo ao <br> TASKER!</h1>
-
-                <p>Estamos aqui para ajudar você a organizar suas tarefas diárias de forma simples e eficiente. Seja
-                    para
-                    gerenciar suas metas, planejar o seu dia ou priorizar o que realmente importa, nosso sistema foi
-                    criado
-                    para facilitar sua rotina e aumentar sua produtividade.</p>
-            </div>
-
-            <div class="conteiner">
-                <h2 class="title">FAÇA O SEU LOGIN</h2>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
+        <title>Tela de login do site</title>
+        <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <!-- fundo -->
+        <div class="fundo"><img src="/images/Acesse sua Conta.png"></div>
+        
+        <!-- tela de login -->
+        <div class="wrapper">
+            <div class="tela-login">
+                <div class="bem-vindo">
+                    <h1>Bem-vindo ao <br> TASKER!</h1>
+                    <p>Estamos aqui para ajudar você a organizar suas tarefas diárias de forma simples e eficiente.</p>
+                </div>
+                
+                <div class="conteiner" id="login-container">
+                    <h2 class="title">FAÇA O SEU LOGIN</h2>
                 <form class="form" onsubmit="handleLogin(event)">
                     <input type="email" placeholder="email" required>
                     <input type="password" placeholder="senha" required>
-                    <h6><a href="https://www.youtube.com/shorts/cwHB4ul03Ds" target="_blank">Esqueceu sua senha?</a></h6>
-
+                    <h6><a href="#">Esqueceu sua senha?</a></h6>
                     <button type="submit">Entrar</button>
+                    <button onclick="toggleForms()">Criar Conta</button>
                 </form>
-
+                
                 <div class="conect">OU CONECTE-SE VIA</div>
-
                 <div class="social-media">
-                    <a href="https://www.youtube.com/watch?v=kqKDnZtOFYk" target="_blank"> <img src="/images/discord.webp"></a>
-
-                    <a href="https://youtu.be/MrsH9mfoQzc" target="_blank"> <img src="/images/facebook.png"></a>
-
-                    <a href="https://www.youtube.com/watch?v=evlXhcs2-Qw" target="_blank"> <img src="/images/telegram.png"></a>
+                    <a href="#"> <img src="/images/discord.webp"></a>
+                    <a href="#"> <img src="/images/facebook.png"></a>
+                    <a href="#"> <img src="/images/telegram.png"></a>
                 </div>
             </div>
-            <script src="/script/login.js"></script>
-
+            
+            <div class="conteiner" id="signup-container" style="display: none;">
+                <h2 class="title">CRIE SUA CONTA</h2>
+                <form class="form" onsubmit="handleSignup(event)">
+                    <input type="text" placeholder="Nome" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Senha" required>
+                    <button type="submit">Cadastrar</button>
+                    <button onclick="toggleForms()">Voltar ao Login</button>
+                </form>
+                
+            </div>
         </div>
-
     </div>
-
+    <!-- fim da tela de login -->
+    
+    <!-- Script de mudança da parte de LOGIN e CRIAR CONTA -->
+    <script>
+        function toggleForms() {
+            const loginContainer = document.getElementById('login-container');
+            const signupContainer = document.getElementById('signup-container');
+            if (loginContainer.style.display === "none") {
+                loginContainer.style.display = "flex";
+                signupContainer.style.display = "none";
+            } else {
+                loginContainer.style.display = "none";
+                signupContainer.style.display = "flex";
+            }
+        }
+        </script>
+    <!-- Fim do Script -->
+    
 </body>
-
 </html>
