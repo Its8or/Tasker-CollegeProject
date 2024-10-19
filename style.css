@@ -39,10 +39,6 @@ body {
     margin: 0;
 }
 
-header {
-    background-color: #1F2329;
-    padding: 10px 5px;
-}
 
 .wrapper {
     display: flex;
@@ -55,27 +51,39 @@ main,
     flex: 1;
 }
 
-nav {
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     background-color: #1F2329;
-    padding: 2px;
+    padding: 10px 5px;
 
-    & ul {
-        list-style-type: none;
-        padding: 0px;
-        margin: 0px;
-        text-align: center;
+    & h1 {
+        padding-left: 10px;
+    }
 
-        & li {
-            display: inline-block;
-            margin-right: 15px;
+    & nav {
+        padding: 2px;
 
-            & a {
-                text-decoration: none;
-                color: #4F4F4F;
-            }
+        & ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            text-align: center;
 
-            & a:hover {
-                color: #F5F5F5;
+            & li {
+                display: inline-flex;
+                margin-right: 15px;
+
+                & a {
+                    text-decoration: none;
+                    color: #4F4F4F;
+                }
+
+                & a:hover {
+                    color: #F5F5F5;
+                }
             }
         }
     }
@@ -216,7 +224,6 @@ main {
                         }
                     }
 
-
                     & #name {
                         background-color: #4F4F4F;
                         border-radius: 20px;
@@ -239,6 +246,7 @@ main {
                         display: grid;
                         padding: 5px 10px;
                         cursor: pointer;
+
                         & #profilePicInput {
                             display: none;
                         }

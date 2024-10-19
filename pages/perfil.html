@@ -10,19 +10,18 @@
 
 <body>
     <div class="wrapper">
+
         <header>
             <h1>Gerenciador de Tarefas</h1>
+            <!-- aqui fica os texto das abas  -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="criar.html">CRIAR NOVO</a></li>
+                    <li><a href="perfil.html">PERFIL</a></li>
+                </ul>
+            </nav>
         </header>
-    
-        <!-- aqui fica os texto das abas  -->
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="criar.html">CRIAR NOVO</a></li>
-                <li><a href="perfil.html">PERFIL</a></li>
-            </ul>
-        </nav>
-    
         <div class="profile">
             <aside>
                 <h1>Perfil do Usuário</h1>
@@ -44,27 +43,27 @@
                         </label>
                         <label>
                             <p>Data de Nascimento:</p>
-                            <input type="date" id="birthdate"/>
+                            <input type="date" id="birthdate" />
                         </label>
                         <h3>Visualização da Foto de Perfil:</h3>
                         <label>
-                        <p>Foto de Perfil</p>
-                        <div id="profilePicture">
-                            <img id="profilePic" src="/images/profile-pic.png" alt="Foto de perfil" />
-                            <input type="file" id="profilePicInput" accept="image/*" onchange="saveUserData()" />
-                        </div>
+                            <div id="profilePicture">
+                                <img id="profilePic" src="/images/profile-pic.png" alt="Foto de perfil" />
+                                <input type="file" id="profilePicInput" accept="image/*" onchange="saveUserData()" />
+                                <p><small>(clique an foto para altera-lá)</small></p>
+                            </div>
                         </label>
                     </form>
-                    
+
                     <div class="buttons">
                         <button onclick="saveUserData()">Salvar</button>
                         <button onclick="logout()">Logout</button>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
-    
+
         <footer>
             <h6>© todos os direitos reservados aos criadores.</h6>
         </footer>
