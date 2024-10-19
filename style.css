@@ -236,14 +236,9 @@ main {
                     }
 
                     & #profilePicture {
-                        background-color: #4F4F4F;
                         display: grid;
-                        font-size: 20px;
-                        border-radius: 20px;
-                        width: fit-content;
                         padding: 5px 10px;
                         cursor: pointer;
-
                         & #profilePicInput {
                             display: none;
                         }
