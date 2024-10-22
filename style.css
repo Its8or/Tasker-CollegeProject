@@ -99,10 +99,10 @@ header {
 
     & .how-to-use {
         margin: 10px 0px 10px 20px;
-
+        
         & .itens {
             margin: 10px 0px 10px 20px;
-
+            
             & #step {
                 margin-bottom: 5px;
             }
@@ -111,90 +111,105 @@ header {
 }
 /* FIM DA SEÇÃO HOME */
 
-main {
-    padding: 10px 20px;
-    display: grid;
-    align-items: center;
 
+/* SEÇÃO DE TAREFAS */
+main {
+    width: 90%;
+    height: 80%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
     & #create-task {
         background-color: #1F2329;
         border-radius: 10px;
         padding: 10px;
         margin: 10px 0px;
-
         & .message {
             padding: 10px 10px 0px 0px;
-
+            
             & #content {
-                padding: 0px 0px 0px 10px;
+                padding: 5px 0px 5px 15px;
             }
-
+            
             & #under-message {
-                padding-top: 3px;
-
+                padding-top: 10px;
+                
                 & #priority {
                     padding: 1.8px;
                 }
             }
-        }
-
-        & #content {
-            width: 100%;
-            height: 25px;
-            border-radius: 20px;
-            border: none;
-            resize: none;
-            overflow: hidden;
-        }
-
-        & .inputs {
-            display: flex;
-            margin: 5px 0px 0px 0px;
-            gap: 15px;
-
-            & button {
+            }
+            
+            & #content {
+                width: 100%;
+                height: 25px;
+                border-radius: 20px;
                 border: none;
-                border-radius: 8px;
-                padding: 2px 5px;
+                resize: none;
+                overflow: hidden;
+            }
+
+            & .inputs {
+                width: 100%;
+                max-width: 50%;
+                padding: 14px;
+                display: flex;
+                gap: 5px;
+                
+                & button {
+                    padding: 5px;
+                    width: 100px;
+                    max-width: 300px;
+                    background-color: #ffffff;
+                    color: rgb(0, 0, 0);
+                    border: none;
+                    border-radius: 100px;
+                    cursor: pointer;
+                    font-size: 15px;
+                }
             }
         }
-    }
-
-    & #on-going {
-        background-color: #1F2329;
-        border-radius: 10px;
-        padding: 10px;
-        margin: 10px 0px;
-        overflow: hidden;
-
-        #head-tasks {
-            display: flex;
-            gap: 10px;
-            justify-content: space-between;
+        
+        & #on-going {
+            background-color: #1F2329;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0px;
+            overflow: hidden;
+            
+            #head-tasks {
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+            }
+            
+            #task-ongoing {
+                padding-top: 10px;
+            }
         }
-
-        #task-ongoing {
-            padding-top: 10px;
-        }
-    }
 }
+/* FIM DA SEÇÃO DE TAREFAS */
+
 
 /* SEÇÃO DE PERFIL */
 .profile {
     display: flex;
     flex-direction: row;
     flex: 1;
-
+    
     /* Sidebar */
     & aside {
         background-color: #131619;
         padding: 10px 20px;
-
+        
         & h1 {
             margin-bottom: 10px;
         }
-
-        & ul {
+        
+        & ul { 
             font-size: 15px;
             padding: 0px 20px;
 
