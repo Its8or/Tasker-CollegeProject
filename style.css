@@ -130,7 +130,12 @@ main {
         margin: 10px 0px;
 
         & .message {
-            padding: 10px 0px;
+            padding: 10px 10px 0px 0px;
+
+            & #content {
+                padding: 0px 0px 0px 10px;
+            }
+
             & #under-message {
                 padding-top: 3px;
 
@@ -152,11 +157,12 @@ main {
         & .inputs {
             display: flex;
             margin: 5px 0px 0px 0px;
-            gap: 20px;
+            gap: 15px;
 
             & button {
                 border: none;
                 border-radius: 8px;
+                padding: 2px 5px;
             }
         }
     }
@@ -167,11 +173,13 @@ main {
         padding: 10px;
         margin: 10px 0px;
         overflow: hidden;
-        #head-tasks{
+
+        #head-tasks {
             display: flex;
             gap: 10px;
             justify-content: space-between;
         }
+
         #task-ongoing {
             padding-top: 10px;
         }
@@ -322,7 +330,7 @@ main {
 
 /* FIM DO FUNDO */
 
-.wrapper{
+.wrapper {
 
     & .tela-login {
         margin: 0 auto;
@@ -340,18 +348,18 @@ main {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    
+
     /* LADO ESQUERDO */
     & .bem-vindo {
         flex: 1 1 50%;
         min-width: 300px;
     }
-    
+
     & .conteiner {
         flex: 1 1 50%;
         min-width: 350px;
     }
-    
+
     & .tela-login .bem-vindo {
         flex: 1;
         background-color: #20201c;
@@ -362,22 +370,22 @@ main {
         text-align: center;
         padding: 60px;
     }
-    
+
     & .tela-login .bem-vindo h1 {
         font-size: 50px;
         margin-bottom: 10px;
         color: #f8f5f5;
     }
-    
+
     & .tela-login .bem-vindo p {
         text-align: center;
         font-size: 16px;
         line-height: 1.5;
         color: #f8f5f5;
     }
-    
+
     /* FIM DO LADO ESQUERDO */
-    
+
     /* LADO DIREITO */
     & .tela-login .conteiner {
         flex: 1;
@@ -388,14 +396,14 @@ main {
         align-items: center;
         padding: 1px;
     }
-    
+
     & .tela-login .conteiner h2 {
         text-align: center;
         font-size: 32px;
         margin-bottom: 10px;
         color: #161615;
     }
-    
+
     & .tela-login .conteiner form {
         align-items: center;
         width: 1000%;
@@ -404,7 +412,7 @@ main {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     & input {
         width: 100%;
         max-width: 300px;
@@ -414,12 +422,12 @@ main {
         border-radius: 100px;
         font-size: 15px;
     }
-    
+
     & .tela-login .conect {
         padding: 25px 0px 10px 0px;
         color: #161615;
     }
-    
+
     & .tela-login h6 {
         align-self: flex-end;
         font-size: 14px;
@@ -428,19 +436,19 @@ main {
         margin-bottom: 10px;
         margin-right: 0px;
     }
-    
+
     & .tela-login a {
         color: inherit;
         text-decoration: none;
     }
-    
+
     & .tela-login img {
         justify-content: center;
         align-items: center;
         height: 30px;
         padding: 0px 15px 0px 15px;
     }
-    
+
     & .tela-login button {
         padding: 10px;
         width: 100%;
@@ -452,18 +460,18 @@ main {
         cursor: pointer;
         font-size: 16px;
     }
-    
+
     /* FIM DO LADO DIREITO */
-    
+
     @media (max-width: 850px) {
         .tela-login {
             flex-direction: column;
             height: auto;
         }
-    
+
         .bem-vindo {
             padding: 10px;
-    
+
             .conteiner {
                 padding: 10px;
                 height: auto;
