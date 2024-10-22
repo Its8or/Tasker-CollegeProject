@@ -8,12 +8,22 @@
     White Smoke (#F5F5F5)
 */
 
-/* pressione alt + Z para quebra automatica de linha */
-/* requisição de responsivilidade(@media query) para o Tasker de 574px de largura em função de melhor funcionamento da seção 'Tarefas Atuais' me CRIAR NOVO*/
+/* Para equipe CSS: 
+    tenta colocar do jeito que eu tô fazendo, fica menos confuso. (heitor)
+ pressione alt + Z para quebra automatica de linha
+ requisição de responsivilidade(@media query) para o Tasker 
+ de 574px de largura  em função de melhor funcionamento 
+ da seção 'Tarefas Atuais' me CRIAR NOVO
+ */
+
+/* Para professor: 
+ Foi decidido que haveria um único CSS para todas as páginas html
+ se tiver sido uma ideia burra, pode reclamar!
+ dá um desconto pela bagunça nas primeiras linhas
+*/
 
 @import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* BASE */
 .georama-fonts {
     font-family: "Georama", sans-serif;
     font-optical-sizing: auto;
@@ -22,6 +32,8 @@
     font-variation-settings:
         "wdth" 100;
 }
+
+
 
 * {
     margin: 0px;
@@ -34,20 +46,22 @@ html {
     & body {
         background-color: #0A0A0A;
         color: #e8e4e4;
-        height: 100%;
-        margin: 0;
     }
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+html,
+body {
+    height: 100%;
+    margin: 0;
 }
-/* FIM DA BASE */
 
-/* BARRA DE CIMA */
+main,
+.profile {
+    flex: 1;
+}
+
 header {
+    /* 54-57 faz menu e nome do site na mesma linha */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,6 +70,7 @@ header {
     padding: 10px 5px;
 
     & h1 {
+        /* h1 junto a "parede" tava feio, coloquei um padding */
         padding-left: 10px;
     }
 
@@ -63,6 +78,7 @@ header {
         padding: 2px;
 
         & ul {
+            /* faz nav ficar em linha e sem aparencia de lista */
             list-style-type: none;
             padding: 0px;
             margin: 0px;
@@ -84,134 +100,128 @@ header {
         }
     }
 }
-/* FIM DA BARRA DE CIMA */
 
-/* SEÇÃO HOME */
+/* Seção para HOME em index.html */
 .about {
+
     background-color: #1F2329;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: start;
     margin: 10px;
     padding: 20px;
     border-radius: 20px;
-    align-items: start;
-    justify-content: center;
 
     & .how-to-use {
         margin: 10px 0px 10px 20px;
-        
+
         & .itens {
             margin: 10px 0px 10px 20px;
-            
+
             & #step {
+                /* gambiarra para separar um passo (de Como Usar)
+                do outro */
                 margin-bottom: 5px;
             }
         }
     }
 }
-/* FIM DA SEÇÃO HOME */
+
+/* FIM */
 
 
-/* SEÇÃO DE TAREFAS */
+/* Seção para TAREFAS em criar.html*/
 main {
-    width: 90%;
-    height: 80%;
-    overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
+
+    padding: 10px 20px;
+    display: grid;
+    align-items: center;
+
     & #create-task {
         background-color: #1F2329;
         border-radius: 10px;
         padding: 10px;
         margin: 10px 0px;
+
         & .message {
+            /*  */
             padding: 10px 10px 0px 0px;
-            
+
             & #content {
-                padding: 5px 0px 5px 15px;
+                padding: 0px 0px 0px 10px;
             }
-            
+
+            /* under-message faz referencia aos botões 
+            em baixo do input de criar tarefas */
             & #under-message {
-                padding-top: 10px;
-                
-                & #priority {
-                    padding: 1.8px;
-                }
-            }
-            }
-            
-            & #content {
-                width: 100%;
-                height: 25px;
-                border-radius: 20px;
-                border: none;
-                resize: none;
-                overflow: hidden;
-            }
-
-            & .inputs {
-                width: 100%;
-                max-width: 50%;
-                padding: 14px;
-                display: flex;
-                gap: 5px;
-                
-                & button {
-                    padding: 5px;
-                    width: 100px;
-                    max-width: 300px;
-                    background-color: #ffffff;
-                    color: rgb(0, 0, 0);
-                    border: none;
-                    border-radius: 100px;
-                    cursor: pointer;
-                    font-size: 15px;
-                }
+                padding-top: 3px;
             }
         }
-        
-        & #on-going {
-            background-color: #1F2329;
-            border-radius: 10px;
-            padding: 10px;
-            margin: 10px 0px;
+
+        /* #content é o input para criar tarefas */
+        & #content {
+            width: 100%;
+            height: 25px;
+            border-radius: 20px;
+            border: none;
+            resize: none;
             overflow: hidden;
-            
-            #head-tasks {
-                display: flex;
-                gap: 10px;
-                justify-content: space-between;
-            }
-            
-            #task-ongoing {
-                padding-top: 10px;
+        }
+
+        /* inputs são os botões Adicionar e Cancelar */
+        & .inputs {
+            display: flex;
+            margin: 5px 0px 0px 0px;
+            gap: 15px;
+
+            & button {
+                border: none;
+                border-radius: 8px;
+                padding: 2px 5px;
             }
         }
+    }
+
+    /* Css para Tarefas Atuais */
+    & #on-going {
+        background-color: #1F2329;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0px;
+        overflow: hidden;
+
+        #head-tasks {
+            /* dispõe 'Tarefas Atuais' e filtro
+             de tarefas em linha única */
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        #task-ongoing {
+            padding-top: 10px;
+        }
+    }
 }
-/* FIM DA SEÇÃO DE TAREFAS */
 
-
-/* SEÇÃO DE PERFIL */
+/* Perfil section em perfil.html */
 .profile {
     display: flex;
     flex-direction: row;
-    flex: 1;
-    
+
     /* Sidebar */
     & aside {
         background-color: #131619;
         padding: 10px 20px;
-        
+
         & h1 {
             margin-bottom: 10px;
         }
-        
-        & ul { 
+
+        & ul {
             font-size: 15px;
-            padding: 0px 20px;
+            padding: 5px 20px;
 
             & li {
 
@@ -229,7 +239,7 @@ main {
 
     /* FIM sidebar */
 
-    /* EDIT Data Sec. */
+    /* seção de 'edição de dados'*/
     & .dataTypes {
         width: 100%;
         padding: 10px 20px;
@@ -263,7 +273,6 @@ main {
                         background-color: #4F4F4F;
                         border-radius: 20px;
                         cursor: text;
-                        height: 15px;
                         border: none;
                     }
 
@@ -273,10 +282,10 @@ main {
                         border-radius: 25px;
                         cursor: pointer;
                         border: none;
-                        height: 10px;
                         height: 15px;
                     }
-
+                    /* meio autoexplicativo, mas isso ajusta
+                     tamanho da preview de foto de perfil*/
                     & #profilePicture {
                         display: grid;
                         padding: 5px 10px;
@@ -311,11 +320,14 @@ main {
 
     /* FIM EDIT DATA sec. */
 }
-/* FIM DA SEÇÃO DE PERFIL */
+
+/* FIM */
 
 
 /* TELA DE LOGIN */
 /* FUNDO */
+
+
 .fundo {
     position: fixed;
     top: 0;
@@ -332,10 +344,16 @@ main {
     object-fit: cover;
     filter: brightness(0.2);
 }
+
 /* FIM DO FUNDO */
 
-/* LOGIN */
 .wrapper {
+
+    /* 343-345 ajudam na visualização do perfil, mexer aqui
+    vai distorcer toda a página */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
     & .tela-login {
         margin: 0 auto;
@@ -484,9 +502,8 @@ main {
         }
     }
 }
-/* FIM DA TELA DE LOGIN */
 
-/* RODAPÉ */
+
 footer {
     background-color: #1F2329;
     position: fixed;
@@ -495,4 +512,3 @@ footer {
     text-align: center;
     height: 1.2rem;
 }
-/* FIM DO RODAPÉ */
