@@ -13,6 +13,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* BASE */
 .georama-fonts {
     font-family: "Georama", sans-serif;
     font-optical-sizing: auto;
@@ -33,27 +34,19 @@ html {
     & body {
         background-color: #0A0A0A;
         color: #e8e4e4;
+        height: 100%;
+        margin: 0;
     }
 }
-
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
-
 
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+/* FIM DA BASE */
 
-main,
-.profile {
-    flex: 1;
-}
-
+/* BARRA DE CIMA */
 header {
     display: flex;
     justify-content: space-between;
@@ -91,8 +84,9 @@ header {
         }
     }
 }
+/* FIM DA BARRA DE CIMA */
 
-/* Seção para HOME */
+/* SEÇÃO HOME */
 .about {
     background-color: #1F2329;
     display: flex;
@@ -115,8 +109,7 @@ header {
         }
     }
 }
-
-/* FIM */
+/* FIM DA SEÇÃO HOME */
 
 main {
     padding: 10px 20px;
@@ -186,10 +179,11 @@ main {
     }
 }
 
-/* Perfil section */
+/* SEÇÃO DE PERFIL */
 .profile {
     display: flex;
     flex-direction: row;
+    flex: 1;
 
     /* Sidebar */
     & aside {
@@ -302,15 +296,11 @@ main {
 
     /* FIM EDIT DATA sec. */
 }
-
-/* FIM */
+/* FIM DA SEÇÃO DE PERFIL */
 
 
 /* TELA DE LOGIN */
 /* FUNDO */
-
-/* tenta colocar do jeito que eu tô fazendo, fica menos confuso. (heitor) */
-
 .fundo {
     position: fixed;
     top: 0;
@@ -327,9 +317,9 @@ main {
     object-fit: cover;
     filter: brightness(0.2);
 }
-
 /* FIM DO FUNDO */
 
+/* LOGIN */
 .wrapper {
 
     & .tela-login {
@@ -479,8 +469,9 @@ main {
         }
     }
 }
+/* FIM DA TELA DE LOGIN */
 
-
+/* RODAPÉ */
 footer {
     background-color: #1F2329;
     position: fixed;
@@ -489,3 +480,4 @@ footer {
     text-align: center;
     height: 1.2rem;
 }
+/* FIM DO RODAPÉ */
