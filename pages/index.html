@@ -20,42 +20,47 @@
             </nav>
         </header>
 
-        <!-- CRIA A NOVA TAREFA E ADICIONA DATA -->
-        <main>
-            <div id="create-task">
-                <h4>Criar tarefa.</h4>
+        <div id="Aba3" class="tab">
+            <!-- CRIA A NOVA TAREFA E ADICIONA DATA -->
+            <main>
+                <div id="create-task">
+                    <h4>Criar tarefa.</h4>
 
-                <div class="message">
-                    <input type="text" name="content-item" id="content" placeholder="Descrição da tarefa">
+                    <div class="message">
+                        <input type="text" name="content-item" id="content" placeholder="Descrição da tarefa">
 
-                    <div id="under-message">
-                        <input type="date" id="due-date">
-                    </div>
+                        <div id="under-message">
+                            <input type="date" id="due-date">
+                        </div>
 
-                    <div class="inputs">
-                        <button id="add-item">Adicionar</button>
-                        <button id="cancel-item">Cancelar</button>
+                        <div class="inputs">
+                            <button id="add-item">Adicionar</button>
+                            <button id="cancel-item">Cancelar</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div id="on-going">
-                <div id="head-tasks">
-                    <h4>Tarefas Atuais</h4>
+                <div id="on-going">
+                    <div id="head-tasks">
+                        <h4>Tarefas Atuais</h4>
 
-                    <select id="filter-tasks">
-                        <option value="all">Todas</option>
-                        <option value="completed">Concluídas</option>
-                        <option value="pending">Pendentes</option>
-                    </select>
+                        <select id="filter-tasks">
+                            <option value="all">Todas</option>
+                            <option value="completed">Concluídas</option>
+                            <option value="pending">Pendentes</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="task-ongoing"></div>
-            </div>
-        </main>
+            </main>
+
+            <script src="/script/tasks.js"></script>
+            <!-- termina aqui -->
+        </div>
+
+
 
         <!-- aqui fica os texto das abas  -->
         <div class="about">
-
             <h2>O que é um Gerenciador de Tarefas?</h2>
             <p>
                 Um gerenciador de tarefas é uma ferramenta que ajuda você a organizar, priorizar e acompanhar todas as
@@ -89,21 +94,9 @@
                         atividades
                         diárias, garantindo que tudo seja feito no prazo.
                     </p>
-                </div>
-            </div>
-
-            <h2>Sobre a Equipe</h2>
-            <p>
-                Nossa equipe é formada por profissionais apaixonados por produtividade e tecnologia. Somos
-                desenvolvedores, designers e especialistas em gerenciamento de projetos, unidos por um único objetivo:
-                facilitar o seu dia a dia com ferramentas que realmente funcionam. Acreditamos que a organização é a
-                chave para o sucesso, e trabalhamos para oferecer uma solução que atenda tanto às suas necessidades
-                pessoais quanto profissionais.
-            </p>
+                  
+        
         </div>
-
-        <script src="/script/tasks.js"></script>
-
         <footer>
             <h6>© todos os direitos reservados aos criadores.</h6>
         </footer>
