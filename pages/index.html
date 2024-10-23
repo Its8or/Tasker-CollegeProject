@@ -15,11 +15,43 @@
             <nav>
                 <ul>
                     <li><a href="/pages/index.html">HOME</a></li>
-                    <li><a href="/pages/criar.html">TAREFAS</a></li>
                     <li><a href="/pages/perfil.html">PERFIL</a></li>
                 </ul>
             </nav>
         </header>
+
+        <!-- CRIA A NOVA TAREFA E ADICIONA DATA -->
+        <main>
+            <div id="create-task">
+                <h4>Criar tarefa.</h4>
+
+                <div class="message">
+                    <input type="text" name="content-item" id="content" placeholder="Descrição da tarefa">
+
+                    <div id="under-message">
+                        <input type="date" id="due-date">
+                    </div>
+
+                    <div class="inputs">
+                        <button id="add-item">Adicionar</button>
+                        <button id="cancel-item">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="on-going">
+                <div id="head-tasks">
+                    <h4>Tarefas Atuais</h4>
+
+                    <select id="filter-tasks">
+                        <option value="all">Todas</option>
+                        <option value="completed">Concluídas</option>
+                        <option value="pending">Pendentes</option>
+                    </select>
+                </div>
+                <div class="task-ongoing"></div>
+            </div>
+        </main>
 
         <!-- aqui fica os texto das abas  -->
         <div class="about">
@@ -69,6 +101,8 @@
                 pessoais quanto profissionais.
             </p>
         </div>
+
+        <script src="/script/tasks.js"></script>
 
         <footer>
             <h6>© todos os direitos reservados aos criadores.</h6>
