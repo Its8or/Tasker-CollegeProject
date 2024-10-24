@@ -126,8 +126,9 @@ main {
 
             /* under-message faz referencia aos botões 
             em baixo do input de criar tarefas */
-            & #under-message{
+            & #under-message {
                 padding-top: 3px;
+
                 & input {
                     border-radius: 25px;
                     padding: 3px;
@@ -169,7 +170,7 @@ main {
         margin: 10px 0px;
         overflow: hidden;
 
-        #head-tasks {
+        & #head-tasks {
             /* dispõe 'Tarefas Atuais' e filtro
             de tarefas em linha única */
             display: flex;
@@ -177,8 +178,19 @@ main {
             justify-content: space-between;
         }
 
-        #task-ongoing {
-            padding-top: 10px;
+        & #task-ongoing {
+            display: grid;
+            width: 100%;
+
+            & .task {
+            }
+
+            & .task-button {
+                cursor: pointer;
+                border: none;
+                border-radius: 8px;
+                padding: 2px 5px;
+            }
         }
     }
 }
@@ -194,6 +206,10 @@ main {
     margin: 10px;
     padding: 10px 20px 10px 10px;
     border-radius: 20px;
+
+    & p {
+        padding-left: 7px;
+    }
 
     & .how-to-use {
         margin: 10px 0px 10px 20px;
@@ -223,22 +239,6 @@ main {
             margin-bottom: 10px;
         }
 
-        & ul {
-            font-size: 15px;
-            padding: 5px 20px;
-
-            & li {
-
-                & a {
-                    text-decoration: none;
-                    color: #4F4F4F;
-                }
-
-                & a:hover {
-                    color: #F5F5F5;
-                }
-            }
-        }
     }
 
     /* FIM sidebar */
@@ -253,6 +253,7 @@ main {
             display: flex;
             flex-direction: column;
             padding: 20px 0px;
+            width: 90%;
 
             & form {
                 display: flex;
@@ -323,6 +324,31 @@ main {
         }
     }
 
+    .questions {
+        width: 30%;
+        position: static;
+        bottom: 30%;
+        right: 100%;
+        padding: 50px 10px 0px 0px;
+
+        & ul {
+            font-size: 15px;
+            padding: 5px 20px;
+
+            & li {
+
+                & a {
+                    text-decoration: none;
+                    color: #4F4F4F;
+                }
+
+                & a:hover {
+                    color: #F5F5F5;
+                }
+            }
+        }
+    }
+
     /* FIM de seção editar dados */
 }
 
@@ -345,7 +371,6 @@ main {
         filter: brightness(0.2);
     }
 }
-
 
 /* FIM DO FUNDO */
 
@@ -509,10 +534,12 @@ main {
     .profile {
         display: flex;
         flex-direction: column;
+
         & aside {
             & h1 {
                 margin: 0px;
             }
+
             & .questions {
                 display: none;
             }

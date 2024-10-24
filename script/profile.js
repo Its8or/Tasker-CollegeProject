@@ -11,6 +11,18 @@ function loadUserData() {
     document.getElementById('profilePic').src = userProfilePic || 'default-profile.png'; // Aqui é a imagem padrão que o site vai usar pra foto do usuario
 }
 
+function toggleForms() {
+    const loginContainer = document.getElementById('login-container');
+    const signupContainer = document.getElementById('signup-container');
+    if (loginContainer.style.display === "none") {
+        loginContainer.style.display = "flex";
+        signupContainer.style.display = "none";
+    } else {
+        loginContainer.style.display = "none";
+        signupContainer.style.display = "flex";
+    }
+}
+
 function saveUserData() {
     const name = document.getElementById('name').value;
     const birthdate = document.getElementById('birthdate').value;
