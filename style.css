@@ -20,7 +20,7 @@
  Foi decidido que haveria um único CSS para todas as páginas html
  se tiver sido uma ideia burra, pode reclamar!
  dá um desconto pela bagunça nas primeiras linhas
-*/
+ */
 
 @import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -51,8 +51,10 @@ html {
 
 html,
 body {
-    height: 100%;
     margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 main,
@@ -101,42 +103,12 @@ header {
     }
 }
 
-/* Seção para HOME em index.html */
-.about {
-
-    background-color: #1F2329;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 20px;
-
-    & .how-to-use {
-        margin: 10px 0px 10px 20px;
-
-        & .itens {
-            margin: 10px 0px 10px 20px;
-
-            & #step {
-                /* gambiarra para separar um passo (de Como Usar)
-                do outro */
-                margin-bottom: 5px;
-            }
-        }
-    }
-}
+/* Perfil section em perfil.html */
 
 /* FIM */
 
-
-/* Seção para TAREFAS em criar.html*/
 main {
-
-    padding: 10px 20px;
-    display: grid;
-    align-items: center;
+    padding: 20px 10px;
 
     & #create-task {
         background-color: #1F2329;
@@ -145,7 +117,7 @@ main {
         margin: 10px 0px;
 
         & .message {
-            /*  */
+
             padding: 10px 10px 0px 0px;
 
             & #content {
@@ -154,8 +126,14 @@ main {
 
             /* under-message faz referencia aos botões 
             em baixo do input de criar tarefas */
-            & #under-message {
+            & #under-message{
                 padding-top: 3px;
+                & input {
+                    border-radius: 25px;
+                    padding: 3px;
+                    text-align: center;
+                    border: none;
+                }
             }
         }
 
@@ -193,7 +171,7 @@ main {
 
         #head-tasks {
             /* dispõe 'Tarefas Atuais' e filtro
-             de tarefas em linha única */
+            de tarefas em linha única */
             display: flex;
             gap: 10px;
             justify-content: space-between;
@@ -205,7 +183,33 @@ main {
     }
 }
 
-/* Perfil section em perfil.html */
+/* Seção para HOME em index.html */
+& .about {
+
+    background-color: #1F2329;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 10px;
+    padding: 10px 20px 10px 10px;
+    border-radius: 20px;
+
+    & .how-to-use {
+        margin: 10px 0px 10px 20px;
+
+        & .itens {
+            margin: 10px 0px 10px 20px;
+
+            & #step {
+                /* gambiarra para separar um passo (em 'Como Usar')
+                do outro */
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
 .profile {
     display: flex;
     flex-direction: row;
@@ -284,8 +288,9 @@ main {
                         border: none;
                         height: 15px;
                     }
+
                     /* meio autoexplicativo, mas isso ajusta
-                     tamanho da preview de foto de perfil*/
+                    tamanho da preview de foto de perfil*/
                     & #profilePicture {
                         display: grid;
                         padding: 5px 10px;
@@ -317,15 +322,12 @@ main {
             }
         }
     }
+
     /* FIM de seção editar dados */
 }
 
-/* FIM */
-
-
 /* TELA DE LOGIN */
 /* FUNDO */
-
 
 .fundo {
     position: fixed;
@@ -335,24 +337,25 @@ main {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.2);
+    }
 }
 
-.fundo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.2);
-}
 
 /* FIM DO FUNDO */
 
 .wrapper {
-
-    /* 343-345 ajudam na visualização do perfil, mexer aqui
-    vai distorcer toda a página */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    /* 343-345 ajudam na visualização do perfil, mexer aqui
+    vai distorcer toda a página */
 
     & .tela-login {
         margin: 0 auto;
@@ -482,30 +485,45 @@ main {
         cursor: pointer;
         font-size: 16px;
     }
+}
 
-    /* FIM DO LADO DIREITO */
+/* FIM DO LADO DIREITO */
 
-    @media (max-width: 850px) {
-        .tela-login {
-            flex-direction: column;
+@media (max-width: 850px) {
+    .tela-login {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .bem-vindo {
+        padding: 10px;
+
+        .conteiner {
+            padding: 10px;
             height: auto;
         }
+    }
+}
 
-        .bem-vindo {
-            padding: 10px;
-
-            .conteiner {
-                padding: 10px;
-                height: auto;
+@media (max-width: 500px) {
+    .profile {
+        display: flex;
+        flex-direction: column;
+        & aside {
+            & h1 {
+                margin: 0px;
+            }
+            & .questions {
+                display: none;
             }
         }
     }
 }
 
-
 footer {
     background-color: #1F2329;
     position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
