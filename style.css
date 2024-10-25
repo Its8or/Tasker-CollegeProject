@@ -122,6 +122,8 @@ main {
 
             & #content {
                 padding: 0px 0px 0px 10px;
+                overflow: scroll;
+
             }
 
             /* under-message faz referencia aos botões 
@@ -130,8 +132,9 @@ main {
                 padding-top: 3px;
 
                 & input {
-                    border-radius: 25px;
+                    border-radius: 30px;
                     padding: 3px;
+                    margin-top: 2px;
                     text-align: center;
                     border: none;
                 }
@@ -157,7 +160,7 @@ main {
             & button {
                 border: none;
                 border-radius: 8px;
-                padding: 2px 5px;
+                padding: 2px 7px;
             }
         }
     }
@@ -182,44 +185,25 @@ main {
             display: grid;
             width: 100%;
 
-            & .task {}
-
-            & .task-button {
-                cursor: pointer;
-                border: none;
-                border-radius: 8px;
-                padding: 2px 5px;
+            .task-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border-bottom: 1px solid #d8d5cf;
             }
-        }
-    }
-}
 
-/* Seção para HOME em index.html */
-& .about {
+            .button-container {
+                display: flex;
+                gap: 10px;
+                /* Espaço entre os botões */
+            }
 
-    background-color: #1F2329;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    margin: 10px;
-    padding: 10px 20px 10px 10px;
-    border-radius: 20px;
-
-    & p {
-        padding-left: 7px;
-    }
-
-    & .how-to-use {
-        margin: 10px 0px 10px 20px;
-
-        & .itens {
-            margin: 10px 0px 10px 20px;
-
-            & #step {
-                /* gambiarra para separar um passo (em 'Como Usar')
-                do outro */
-                margin-bottom: 5px;
+            .task-button {
+                border-radius: 20px;
+                padding: 2px 7px;
+                border: none;
+                cursor: pointer;
             }
         }
     }
@@ -325,7 +309,7 @@ main {
 
     .questions {
         width: 30%;
-        position: static;
+        position: fixed;
         bottom: 30%;
         right: 100%;
         padding: 50px 10px 0px 0px;
@@ -378,8 +362,36 @@ main {
     flex-direction: column;
     min-height: 100vh;
 
-    /* 343-345 ajudam na visualização do perfil, mexer aqui
-    vai distorcer toda a página */
+    /* Seção para HOME em index.html */
+    & .about {
+        background-color: #1F2329;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin: 10px;
+        padding: 10px 20px 10px 10px;
+        border-radius: 20px;
+
+        & p {
+            padding-left: 7px;
+        }
+
+        & .how-to-use {
+            margin: 10px 0px 10px 20px;
+
+            & .itens {
+                margin: 10px 0px 10px 20px;
+
+                & #step {
+                    /* gambiarra para separar um passo (em 'Como Usar')
+                        do outro */
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
 
     & .tela-login {
         margin: 0 auto;
@@ -529,10 +541,11 @@ main {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .profile {
         display: flex;
         flex-direction: column;
+        overflow-x: hidden;
 
         & aside {
             & h1 {

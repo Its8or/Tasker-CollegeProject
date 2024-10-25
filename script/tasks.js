@@ -12,34 +12,40 @@ function createTaskElement({ content, dueDate, completed = false }) {
     const taskDiv = document.createElement('div');
     taskDiv.className = 'task-item';
 
-    const dueDateText = dueDate ? ` - Vencimento: ${dueDate}` : ''; // Verifica se a data de vencimento foi definida
+    const dueDateText = dueDate ? ` - Vencimento: ${dueDate}` : '';
 
-    taskDiv.innerHTML = `
-        <span class="task" style="${completed ? 'text-decoration: line-through;' : ''}">
-            ${content}${dueDateText}
-        </span>
-            `;
+    // Criação do span da tarefa
+    const taskSpan = document.createElement('span');
+    taskSpan.className = 'task';
+    taskSpan.style.textDecoration = completed ? 'line-through' : '';
+    taskSpan.textContent = `${content}${dueDateText}`;
+    taskDiv.appendChild(taskSpan);
+
+    // Criação do container para os botões
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = 'button-container'; // botões manipuláveis, corrigido.
 
     ['Concluir', 'Editar', 'Remover'].forEach(text => {
         const button = document.createElement('button');
-        button.classList.add('task-button', `buttons`);
+        button.classList.add('task-button');
         button.textContent = text;
         button.onclick = text === 'Concluir' ? () => {
-            taskDiv.style.textDecoration = 'line-through';
+            taskSpan.style.textDecoration = 'line-through';
             updateTask(content, true);
             button.disabled = true;
         } : text === 'Editar' ? () => {
             contentInput.value = content;
             dueDateInput.value = dueDate;
-            removeTask(content); // Remove a tarefa atual para poder adicionar a editada
+            removeTask(content); 
         } : () => {
             taskOngoingDiv.removeChild(taskDiv);
             removeTask(content);
         };
-        taskDiv.appendChild(button);
+        buttonContainer.appendChild(button); // Adiciona os botões ao container
     });
 
-    taskOngoingDiv.appendChild(taskDiv);
+    taskDiv.appendChild(buttonContainer); // Adiciona o container de botões ao taskDiv
+    taskOngoingDiv.appendChild(taskDiv); // Adiciona a tarefa na div de tarefas
 }
 
 function updateTask(content, completed) {
