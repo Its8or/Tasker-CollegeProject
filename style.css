@@ -85,6 +85,7 @@ header {
             padding: 0px;
             margin: 0px;
             text-align: center;
+            font-size: large;
 
             & li {
                 display: inline-flex;
@@ -108,7 +109,7 @@ header {
 /* FIM */
 
 main {
-    padding: 20px 10px;
+    padding: 20px 10px 0px 10px;
 
     & #create-task {
         background-color: #1F2329;
@@ -207,6 +208,14 @@ main {
             }
         }
     }
+}
+
+/* autoexplicativo, div somente pra separar conteúdo 
+principal do 'about' */
+#separador{
+    background: white;
+    padding: 1px;
+    margin: 0px 10px 0px 10px;
 }
 
 .profile {
@@ -371,7 +380,7 @@ main {
         align-items: start;
         margin: 10px;
         padding: 10px 20px 10px 10px;
-        border-radius: 20px;
+        border-radius: 10px;
 
         & p {
             padding-left: 7px;
