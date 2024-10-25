@@ -14,7 +14,7 @@
  requisição de responsivilidade(@media query) para o Tasker 
  de 574px de largura  em função de melhor funcionamento 
  da seção 'Tarefas Atuais' me CRIAR NOVO
- */
+*/
 
 /* Para professor: 
  Foi decidido que haveria um único CSS para todas as páginas html
@@ -182,8 +182,7 @@ main {
             display: grid;
             width: 100%;
 
-            & .task {
-            }
+            & .task {}
 
             & .task-button {
                 cursor: pointer;
