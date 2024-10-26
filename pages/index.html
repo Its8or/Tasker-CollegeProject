@@ -26,21 +26,27 @@
             <h4>Criar tarefa</h4>
 
             <div class="message">
+            <!-- Campo de entrada para a descrição da tarefa -->    
                 <input type="text" name="content-item" id="content" placeholder="Descrição da tarefa">
 
                 <div id="under-message">
+                <!-- Campo para selecionar a data de vencimento da tarefa -->    
                     <input type="date" id="due-date">
                     <div class="inputs">
+                <!-- Botão para adicionar uma nova tarefa -->        
                         <button id="add-item">Adicionar</button>
+                <!-- Botão para cancelar a criação de uma nova tarefa -->        
                         <button id="cancel-item">Cancelar</button>
                     </div>
                 </div>
             </div>
         </div>
         <div id="on-going">
+        <!-- Cabeçalho para as tarefas em andamento -->    
             <div id="head-tasks">
                 <h4>Tarefas Atuais</h4>
 
+            <!-- Filtro para exibir todas as tarefas, concluídas ou pendentes -->    
                 <select id="filter-tasks">
                     <option value="all">Todas</option>
                     <option value="completed">Concluídas</option>
