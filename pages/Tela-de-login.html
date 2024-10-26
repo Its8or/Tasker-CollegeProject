@@ -14,23 +14,44 @@
         
         <!-- tela de login -->
         <div class="wrapper">
+         <!-- Área principal da tela de login/registro -->   
             <div class="tela-login">
+          <!-- Seção de boas-vindas ao aplicativo -->      
                 <div class="bem-vindo">
                     <h1>Bem-vindo ao <br> TASKER!</h1>
                     <p>Estamos aqui para ajudar você a organizar suas tarefas diárias de forma simples e eficiente.</p>
                 </div>
                 
+           
+                <!-- Container do formulário de login -->     
                 <div class="conteiner" id="login-container">
+             
+                    <!-- Título do formulário de login -->       
                     <h2 class="title">FAÇA O SEU LOGIN</h2>
+              
+                    <!-- Formulário de login com evento para lidar com a submissão -->      
                 <form class="form" onsubmit="handleLogin(event)">
+               
+                    <!-- Campo de entrada para o e-mail do usuário -->   
                     <input type="email" placeholder="email" required>
+              
+                    <!-- Campo de entrada para a senha do usuário -->      
                     <input type="password" placeholder="senha" required>
+               
+                    <!-- Link para recuperação de senha -->    
                     <h6><a href="#">Esqueceu sua senha?</a></h6>
+               
+                    <!-- Botão para enviar o formulário de login -->     
                     <button type="submit">Entrar</button>
+
+               <!-- Botão para alternar para o formulário de criação de conta -->     
                     <button onclick="toggleForms()">Criar Conta</button>
                 </form>
-                
+
+                <!-- Seção para conectar via redes sociais -->
                 <div class="conect">OU CONECTE-SE VIA</div>
+                
+                <!-- Links para redes sociais com ícones -->
                 <div class="social-media">
                     <a href="#"> <img src="/images/discord.webp"></a>
                     <a href="#"> <img src="/images/facebook.png"></a>
@@ -38,13 +59,28 @@
                 </div>
             </div>
             
+            <!-- Container do formulário de criação de conta (inicialmente oculto) -->
             <div class="conteiner" id="signup-container" style="display: none;">
+                
+                <!-- Título do formulário de cadastro -->
                 <h2 class="title">CRIE SUA CONTA</h2>
+               
+                <!-- Formulário de cadastro com evento para lidar com a submissão -->  
                 <form class="form" onsubmit="handleSignup(event)">
-                    <input type="text" placeholder="Nome" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Senha" required>
-                    <button type="submit">Cadastrar</button>
+                    
+                    <!-- Campo de entrada para o nome do usuário -->
+                     <input type="text" placeholder="Nome" required>
+                    
+                     <!-- Campo de entrada para o e-mail do usuário -->
+                   <input type="email" placeholder="Email" required>
+                
+                   <!-- Campo de entrada para a senha do usuário -->
+                <input type="password" placeholder="Senha" required>
+                   
+                <!-- Botão para enviar o formulário de cadastro -->
+                <button type="submit">Cadastrar</button>
+            
+                <!-- Botão para alternar de volta para o formulário de login -->
                     <button onclick="toggleForms()">Voltar ao Login</button>
                 </form>
                 
