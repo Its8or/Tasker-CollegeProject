@@ -182,6 +182,10 @@ main {
             justify-content: space-between;
         }
 
+        & #filter-tasks{
+            border-radius: 20px;
+        }
+
         & #task-ongoing {
             display: grid;
             width: 100%;
@@ -212,7 +216,7 @@ main {
 
 /* autoexplicativo, div somente pra separar conteúdo 
 principal do 'about' */
-#separador{
+#separador {
     background: white;
     padding: 1px;
     margin: 0px 10px 0px 10px;
@@ -534,6 +538,8 @@ principal do 'about' */
 
 /* FIM DO LADO DIREITO */
 
+/* não mexe, esse media query é do rafa. (heitor) */
+
 @media (max-width: 850px) {
     .tela-login {
         flex-direction: column;
@@ -550,7 +556,16 @@ principal do 'about' */
     }
 }
 
-@media (max-width: 550px) {
+/* Façam a responsividade aqui */
+
+/* mobile */
+@media (min-width: 320px) and (max-width: 425px) {
+    main{
+        h4{
+            font-size: 150%;
+        }
+    }
+
     .profile {
         display: flex;
         flex-direction: column;
@@ -566,6 +581,11 @@ principal do 'about' */
             }
         }
     }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1280px){
+
 }
 
 footer {
