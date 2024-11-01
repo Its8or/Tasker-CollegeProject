@@ -155,13 +155,14 @@ main {
         /* inputs são os botões Adicionar e Cancelar */
         & .inputs {
             display: flex;
+
             margin: 5px 0px 0px 0px;
-            gap: 15px;
+            gap: 10px;
 
             & button {
                 border: none;
                 border-radius: 8px;
-                padding: 2px 7px;
+                padding: 2px 5px;
             }
         }
     }
@@ -178,7 +179,7 @@ main {
             /* dispõe 'Tarefas Atuais' e filtro
             de tarefas em linha única */
             display: flex;
-            gap: 10px;
+            gap: 5px;
             justify-content: space-between;
         }
 
