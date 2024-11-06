@@ -1,13 +1,3 @@
-/* 
-    Color scheme:
-    Jet Black (#0A0A0A)
-    Charcoal (#2C2C2C) 
-    Slate Gray (#4F4F4F) 
-    Gunmetal (#1F2329)
-    Neon Blue (#00FFFF)
-    White Smoke (#F5F5F5)
-*/
-
 /* Para equipe CSS: 
     tenta colocar do jeito que eu tô fazendo, fica menos confuso. (heitor)
  pressione alt + Z para quebra automatica de linha
@@ -23,6 +13,17 @@
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --JetBlack: #0a0a0a;
+    --Charcoal: #2C2C2C;
+    --SlateGray: #4F4F4F;
+    --Gunmetal: #1F2329;
+    --WhiteSmoke: #F5F5F5;
+    --RafaBlack: #161615;
+    --linksWhite: #d8d5cf;
+}
 
 .georama-fonts {
     font-family: "Georama", sans-serif;
@@ -44,7 +45,7 @@ html {
     scroll-behavior: smooth;
 
     & body {
-        background-color: #0A0A0A;
+        background-color: var(--JetBlack);
         color: #e8e4e4;
     }
 }
@@ -63,13 +64,18 @@ main,
 }
 
 header {
-    /* 54-57 faz menu e nome do site na mesma linha */
+    /* faz menu e nome do site na mesma linha */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*  */
 
-    background-color: #1F2329;
+    background-color: var(--Gunmetal);
     padding: 10px 5px;
+
+    &#mobile {
+        display: none;
+    }
 
     & h1 {
         /* h1 junto a "parede" tava feio, coloquei um padding */
@@ -93,16 +99,17 @@ header {
 
                 & a {
                     text-decoration: none;
-                    color: #4F4F4F;
+                    color: var(--SlateGray);
                 }
 
                 & a:hover {
-                    color: #F5F5F5;
+                    color: var(--WhiteSmoke);
                 }
             }
         }
     }
 }
+
 
 /* Perfil section em perfil.html */
 
@@ -112,7 +119,7 @@ main {
     padding: 20px 10px 0px 10px;
 
     & #create-task {
-        background-color: #1F2329;
+        background-color: var(--Gunmetal);
         border-radius: 10px;
         padding: 10px;
         margin: 10px 0px;
@@ -169,7 +176,7 @@ main {
 
     /* Css para Tarefas Atuais */
     & #on-going {
-        background-color: #1F2329;
+        background-color: var(--Gunmetal);
         border-radius: 10px;
         padding: 10px;
         margin: 10px 0px;
@@ -183,7 +190,7 @@ main {
             justify-content: space-between;
         }
 
-        & #filter-tasks{
+        & #filter-tasks {
             border-radius: 20px;
         }
 
@@ -196,7 +203,7 @@ main {
                 justify-content: space-between;
                 align-items: center;
                 padding: 10px;
-                border-bottom: 1px solid #d8d5cf;
+                border-bottom: 1px solid var(--linksWhite);
             }
 
             .button-container {
@@ -266,21 +273,21 @@ principal do 'about' */
 
                     & p {
                         & small {
-                            color: #4F4F4F;
+                            color: var(--SlateGray);
                             font-size: 15px;
                         }
                     }
 
                     & #name {
-                        background-color: #4F4F4F;
+                        background-color: var(--SlateGray);
                         border-radius: 20px;
                         cursor: text;
                         border: none;
                     }
 
                     & #birthdate {
-                        background-color: #4F4F4F;
-                        color: #0A0A0A;
+                        background-color: var(--SlateGray);
+                        color: var(--JetBlack);
                         border-radius: 25px;
                         cursor: pointer;
                         border: none;
@@ -336,11 +343,11 @@ principal do 'about' */
 
                 & a {
                     text-decoration: none;
-                    color: #4F4F4F;
+                    color: var(--SlateGray);
                 }
 
                 & a:hover {
-                    color: #F5F5F5;
+                    color: var(--WhiteSmoke);
                 }
             }
         }
@@ -378,7 +385,7 @@ principal do 'about' */
 
     /* Seção para HOME em index.html */
     & .about {
-        background-color: #1F2329;
+        background-color: var(--Gunmetal);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -476,7 +483,7 @@ principal do 'about' */
         text-align: center;
         font-size: 32px;
         margin-bottom: 10px;
-        color: #161615;
+        color: var(--RafaBlack);
     }
 
     & .tela-login .conteiner form {
@@ -493,14 +500,14 @@ principal do 'about' */
         max-width: 300px;
         padding: 10px;
         border: none;
-        background-color: #d8d5cf;
+        background-color: var(--linksWhite);
         border-radius: 100px;
         font-size: 15px;
     }
 
     & .tela-login .conect {
         padding: 25px 0px 10px 0px;
-        color: #161615;
+        color: var(--RafaBlack);
     }
 
     & .tela-login h6 {
@@ -528,7 +535,7 @@ principal do 'about' */
         padding: 10px;
         width: 100%;
         max-width: 300px;
-        background-color: #161615;
+        background-color: var(--RafaBlack);
         color: white;
         border: none;
         border-radius: 100px;
@@ -560,9 +567,56 @@ principal do 'about' */
 /* Façam a responsividade aqui */
 
 /* mobile */
-@media (min-width: 320px) and (max-width: 425px) {
-    main{
-        h4{
+@media screen and (max-width: 425px) {
+
+    header#desktop {
+        display: none;
+    }
+
+    header#mobile {
+        display: initial;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        background-color: var(--Gunmetal);
+        padding: 10px 5px;
+
+        & h1 {
+            /* h1 junto a "parede" tava feio, coloquei um padding */
+            padding-left: 10px;
+        }
+
+        & nav {
+            padding: 2px;
+
+            & ul {
+                /* faz nav ficar em linha e sem aparencia de lista */
+                list-style-type: none;
+                padding: 0px;
+                margin: 0px;
+                text-align: center;
+                font-size: large;
+
+                & li {
+                    display: inline-flex;
+                    margin-right: 15px;
+
+                    & a {
+                        text-decoration: none;
+                        color: var(--SlateGray);
+                    }
+
+                    & a:hover {
+                        color: var(--WhiteSmoke);
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        h4 {
             font-size: 150%;
         }
     }
@@ -585,12 +639,10 @@ principal do 'about' */
 }
 
 /* Tablet */
-@media (min-width: 601px) and (max-width: 1280px){
-
-}
+@media (min-width: 601px) and (max-width: 1280px) {}
 
 footer {
-    background-color: #1F2329;
+    background-color: var(--Gunmetal);
     position: fixed;
     left: 0;
     bottom: 0;
