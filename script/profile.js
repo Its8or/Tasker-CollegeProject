@@ -8,7 +8,7 @@ function loadUserData() {
     document.getElementById('email').innerText = userEmail || "Usuário não logado.";
     document.getElementById('name').value = userName || '';
     document.getElementById('birthdate').value = userBirthdate || '';
-    document.getElementsByClassName('profilePic').src = userProfilePic || '/images/profile-pic.png'; // Aqui é a imagem padrão que o site vai usar pra foto do usuario
+    document.getElementById('profilePic').src = userProfilePic || '/images/profile-pic.png'; // Aqui é a imagem padrão que o site vai usar pra foto do usuario
 }
 
 function toggleForms() {
