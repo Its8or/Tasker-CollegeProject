@@ -197,7 +197,7 @@ main {
         & #task-ongoing {
             display: grid;
             width: 100%;
-            
+
             .task-item {
                 display: flex;
                 justify-content: space-between;
@@ -206,7 +206,7 @@ main {
                 border-bottom: 1px solid var(--linksWhite);
             }
 
-            .task{
+            .task {
                 word-break: break-all
             }
 
@@ -289,7 +289,7 @@ principal do 'about' */
                         cursor: text;
                         border: none;
                     }
-                    
+
                     & #birthdate {
                         background-color: var(--SlateGray);
                         color: var(--JetBlack);
@@ -427,16 +427,16 @@ principal do 'about' */
 
 
     & .tela-login {
-        margin: 0 auto;
+        background-color: white;
         display: flex;
         flex-wrap: nowrap;
+        margin: 0 auto;
         width: 90%;
-        max-width: 900px;
         height: 450px;
-        background-color: white;
         border-radius: 25px;
         box-shadow: 0px 0px 10px white;
         overflow: hidden;
+        /* posicionamento na tela */
         position: absolute;
         top: 50%;
         left: 50%;
@@ -444,10 +444,6 @@ principal do 'about' */
     }
 
     /* LADO ESQUERDO */
-    & .bem-vindo {
-        flex: 1 1 50%;
-        min-width: 300px;
-    }
 
     & .conteiner {
         flex: 1 1 50%;
@@ -561,17 +557,25 @@ principal do 'about' */
 /* não mexe, esse media query é do rafa. (heitor) */
 
 @media (max-width: 850px) {
-    .tela-login {
-        flex-direction: column;
-        height: auto;
-    }
 
     .bem-vindo {
-        padding: 10px;
+        height: 50px;
+
+        p {
+            display: none;
+        }
 
         .conteiner {
             padding: 10px;
             height: auto;
+        }
+    }
+    
+    .tela-login {
+        flex-direction: column;
+        height: auto;
+        .conteiner {
+            padding: 10px;
         }
     }
 }
@@ -636,7 +640,7 @@ principal do 'about' */
             font-size: 150%;
         }
 
-        .button-container{
+        .button-container {
             display: flex;
             flex-direction: column;
         }
