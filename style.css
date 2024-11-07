@@ -556,6 +556,7 @@ principal do 'about' */
 
 /* não mexe, esse media query é do rafa. (heitor) */
 
+/* tentei tornar o login responsível, falhei miserávelmente */
 @media (max-width: 850px) {
 
     .bem-vindo {
