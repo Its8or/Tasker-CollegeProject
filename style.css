@@ -17,11 +17,11 @@
 
 :root {
     --JetBlack: #0a0a0a;
+    --RafaBlack: #161615;
+    --Gunmetal: #1F2329;
     --Charcoal: #2C2C2C;
     --SlateGray: #4F4F4F;
-    --Gunmetal: #1F2329;
     --WhiteSmoke: #F5F5F5;
-    --RafaBlack: #161615;
     --linksWhite: #d8d5cf;
 }
 
@@ -278,16 +278,18 @@ principal do 'about' */
                         }
                     }
 
-                    & #name {
+                    & input#name {
                         background-color: var(--SlateGray);
+                        margin-top: 2px;
                         border-radius: 20px;
                         cursor: text;
                         border: none;
                     }
-
+                    
                     & #birthdate {
                         background-color: var(--SlateGray);
                         color: var(--JetBlack);
+                        margin-top: 2px;
                         border-radius: 25px;
                         cursor: pointer;
                         border: none;
@@ -322,7 +324,13 @@ principal do 'about' */
                 }
 
                 & .buttons {
+                    display: flex;
                     cursor: pointer;
+                    border: none;
+                    gap: 10px;
+                    border-radius: 8px;
+                    margin: 5px 0px 0px 0px;
+                    padding: 2px 5px;
                 }
             }
         }
@@ -578,7 +586,7 @@ principal do 'about' */
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+
         background-color: var(--Gunmetal);
         padding: 10px 5px;
 
