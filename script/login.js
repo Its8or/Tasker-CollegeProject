@@ -1,5 +1,6 @@
-function handleLogin(event) {
-    event.preventDefault(); // Aqui é um script massa que sugiro não mexer
+function handleLogin(event) {// Impede o comportamento padrão do formulário, que recarregaria a página ao enviar
+    event.preventDefault();
+// Lógica adicional de login aqui
 
     // Obtém os valores dos campos de entrada
     const email = document.querySelector('input[type="email"]').value;
