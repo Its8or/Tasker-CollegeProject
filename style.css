@@ -422,7 +422,7 @@ principal do 'about' */
         flex-wrap: nowrap; /* Impede que os elementos filhos quebrem linha */
         width: 90%; /* Define a largura como 90% da área disponível */
         max-width: 900px; /* Limita a largura máxima a 900px */
-        height: 450px; /* Define a altura fixa de 450px */
+        height: 90%; /* Define a altura fixa de 450px */
         background-color: white; /* Define o fundo como branco */
         border-radius: 25px; /* Adiciona bordas arredondadas de 25px */
         box-shadow: 0px 0px 10px white; /* Adiciona uma sombra ao redor do container */
@@ -476,7 +476,7 @@ principal do 'about' */
             
             & form {
                 align-items: center; /* Centraliza o conteúdo do formulário */
-                width: 1000%; /* Define uma largura exagerada (aparentemente por erro) */
+                width: 100%; /* Define uma largura exagerada (aparentemente por erro) */
                 max-width: 300px; /* Limita a largura máxima a 300px */
                 display: flex; /* Usa flexbox para organizar o conteúdo */
                 flex-direction: column; /* Organiza o conteúdo em coluna */
@@ -490,6 +490,9 @@ principal do 'about' */
                     background-color: #F5F5F5; /* Define o fundo como cinza claro */
                     border-radius: 100px; /* Arredonda as bordas */
                     font-size: 15px; /* Define o tamanho da fonte */
+                }
+                & button#create_account{
+                    display: none
                 }
             }
         }
