@@ -1,16 +1,8 @@
 /* Para equipe CSS: 
-    tenta colocar do jeito que eu tô fazendo, fica menos confuso. (heitor)
- pressione alt + Z para quebra automatica de linha
- requisição de responsivilidade(@media query) para o Tasker 
- de 574px de largura  em função de melhor funcionamento 
- da seção 'Tarefas Atuais' me CRIAR NOVO
-*/
+Tenta colocar do jeito que eu tô fazendo, fica menos confuso. (heitor) Pressione alt + Z para quebra automatica de linha requisição de responsivilidade(@media query) para o Tasker de 574px de largura  em função de melhor funcionamento da seção 'Tarefas Atuais' me CRIAR NOVO */
 
 /* Para professor: 
- Foi decidido que haveria um único CSS para todas as páginas html
- se tiver sido uma ideia burra, pode reclamar!
- dá um desconto pela bagunça nas primeiras linhas
- */
+Foi decidido que haveria um único CSS para todas as páginas html se tiver sido uma ideia burra, pode reclamar! Dá um desconto pela bagunça nas primeiras linhas */
 
 @import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -31,7 +23,7 @@
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
-        "wdth" 100;
+    "wdth" 100;
 }
 
 
@@ -43,7 +35,7 @@
 
 html {
     scroll-behavior: smooth;
-
+    
     & body {
         background-color: var(--JetBlack);
         color: #e8e4e4;
@@ -69,22 +61,22 @@ header {
     justify-content: space-between;
     align-items: center;
     /*  */
-
+    
     background-color: var(--Gunmetal);
     padding: 10px 5px;
-
+    
     &#mobile {
         display: none;
     }
-
+    
     & h1 {
         /* h1 junto a "parede" tava feio, coloquei um padding */
         padding-left: 10px;
     }
-
+    
     & nav {
         padding: 2px;
-
+        
         & ul {
             /* faz nav ficar em linha e sem aparencia de lista */
             list-style-type: none;
@@ -96,12 +88,12 @@ header {
             & li {
                 display: inline-flex;
                 margin-right: 15px;
-
+                
                 & a {
                     text-decoration: none;
                     color: var(--SlateGray);
                 }
-
+                
                 & a:hover {
                     color: var(--WhiteSmoke);
                 }
@@ -117,23 +109,23 @@ header {
 
 main {
     padding: 20px 10px 0px 10px;
-
+    
     & #create-task {
         background-color: var(--Gunmetal);
         border-radius: 10px;
         padding: 10px;
         margin: 10px 0px;
-
+        
         & .message {
-
+            
             padding: 10px 10px 0px 0px;
-
+            
             & #content {
                 padding: 0px 0px 0px 10px;
                 overflow: scroll;
-
+                
             }
-
+            
             /* under-message faz referencia aos botões 
             em baixo do input de criar tarefas */
             & #under-message {
@@ -148,7 +140,7 @@ main {
                 }
             }
         }
-
+        
         /* #content é o input para criar tarefas */
         & #content {
             width: 100%;
@@ -158,14 +150,14 @@ main {
             resize: none;
             overflow: hidden;
         }
-
+        
         /* inputs são os botões Adicionar e Cancelar */
         & .inputs {
             display: flex;
-
+            
             margin: 5px 0px 0px 0px;
             gap: 10px;
-
+            
             & button {
                 border: none;
                 border-radius: 8px;
@@ -173,7 +165,7 @@ main {
             }
         }
     }
-
+    
     /* Css para Tarefas Atuais */
     & #on-going {
         background-color: var(--Gunmetal);
@@ -181,7 +173,7 @@ main {
         padding: 10px;
         margin: 10px 0px;
         overflow: hidden;
-
+        
         & #head-tasks {
             /* dispõe 'Tarefas Atuais' e filtro
             de tarefas em linha única */
@@ -189,15 +181,15 @@ main {
             gap: 5px;
             justify-content: space-between;
         }
-
+        
         & #filter-tasks {
             border-radius: 20px;
         }
-
+        
         & #task-ongoing {
             display: grid;
             width: 100%;
-
+            
             .task-item {
                 display: flex;
                 justify-content: space-between;
@@ -205,17 +197,17 @@ main {
                 padding: 10px;
                 border-bottom: 1px solid var(--linksWhite);
             }
-
+            
             .task {
                 word-break: break-all
             }
-
+            
             .button-container {
                 display: flex;
                 gap: 10px;
                 /* Espaço entre os botões */
             }
-
+            
             .task-button {
                 border-radius: 20px;
                 padding: 2px 7px;
@@ -237,26 +229,26 @@ principal do 'about' */
 .profile {
     display: flex;
     flex-direction: row;
-
+    
     /* Sidebar */
     & aside {
         background-color: #131619;
         padding: 10px 20px;
-
+        
         & h1 {
             margin-bottom: 10px;
         }
-
+        
     }
-
+    
     /* FIM sidebar */
-
+    
     /* seção de 'edição de dados'*/
     & .dataTypes {
         width: 100%;
         padding: 10px 20px;
         font-size: 20px;
-
+        
         & .inputs {
             display: flex;
             flex-direction: column;
@@ -267,21 +259,21 @@ principal do 'about' */
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
-
+                
                 & h3 {
                     padding-top: 5px;
                 }
-
+                
                 & label {
                     padding: 5px 0px;
-
+                    
                     & p {
                         & small {
                             color: var(--SlateGray);
                             font-size: 15px;
                         }
                     }
-
+                    
                     & input#name {
                         background-color: var(--SlateGray);
                         margin-top: 2px;
@@ -289,7 +281,7 @@ principal do 'about' */
                         cursor: text;
                         border: none;
                     }
-
+                    
                     & #birthdate {
                         background-color: var(--SlateGray);
                         color: var(--JetBlack);
@@ -299,34 +291,34 @@ principal do 'about' */
                         border: none;
                         height: 15px;
                     }
-
+                    
                     /* meio autoexplicativo, mas isso ajusta
                     tamanho da preview de foto de perfil*/
                     & #profilePicture {
                         display: grid;
                         padding: 5px 10px;
                         cursor: pointer;
-
+                        
                         & #profilePicInput {
                             display: none;
                         }
                     }
                 }
-
+                
                 & img {
                     height: 100px;
                     width: 100px;
                     object-fit: cover;
                     border-radius: 50%;
                 }
-
+                
                 & #profilePic {
                     height: 150px;
                     width: 150px;
                     object-fit: cover;
                     border-radius: 50%;
                 }
-
+                
                 & .buttons {
                     display: flex;
                     cursor: pointer;
@@ -339,25 +331,25 @@ principal do 'about' */
             }
         }
     }
-
+    
     .questions {
         width: 30%;
         position: fixed;
         bottom: 30%;
         right: 100%;
         padding: 50px 10px 0px 0px;
-
+        
         & ul {
             font-size: 15px;
             padding: 5px 20px;
-
+            
             & li {
-
+                
                 & a {
                     text-decoration: none;
                     color: var(--SlateGray);
                 }
-
+                
                 & a:hover {
                     color: var(--WhiteSmoke);
                 }
@@ -370,7 +362,6 @@ principal do 'about' */
 
 /* TELA DE LOGIN */
 /* FUNDO */
-
 .fundo {
     position: fixed;
     top: 0;
@@ -379,7 +370,7 @@ principal do 'about' */
     height: 100%;
     z-index: -1;
     overflow: hidden;
-
+    
     & img {
         width: 100%;
         height: 100%;
@@ -387,14 +378,13 @@ principal do 'about' */
         filter: brightness(0.2);
     }
 }
-
 /* FIM DO FUNDO */
 
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
+    
     /* Seção para HOME em index.html */
     & .about {
         background-color: var(--Gunmetal);
@@ -405,167 +395,157 @@ principal do 'about' */
         margin: 10px;
         padding: 10px 20px 10px 10px;
         border-radius: 10px;
-
+        
         & p {
             padding-left: 7px;
         }
-
+        
         & .how-to-use {
             margin: 10px 0px 10px 20px;
 
             & .itens {
                 margin: 10px 0px 10px 20px;
-
+                
                 & #step {
                     /* gambiarra para separar um passo (em 'Como Usar')
-                        do outro */
+                    do outro */
                     margin-bottom: 5px;
                 }
             }
         }
     }
-
-
+    
+    /* ESTILOS DA TELA DE LOGIN */
     & .tela-login {
-        background-color: white;
-        display: flex;
-        flex-wrap: nowrap;
-        margin: 0 auto;
-        width: 90%;
-        height: 450px;
-        border-radius: 25px;
-        box-shadow: 0px 0px 10px white;
-        overflow: hidden;
-        /* posicionamento na tela */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin: 0 auto; /* Centraliza horizontalmente o container da tela de login */
+        display: flex; /* Usa o modelo flexbox para organizar os elementos filhos */
+        flex-wrap: nowrap; /* Impede que os elementos filhos quebrem linha */
+        width: 90%; /* Define a largura como 90% da área disponível */
+        max-width: 900px; /* Limita a largura máxima a 900px */
+        height: 450px; /* Define a altura fixa de 450px */
+        background-color: white; /* Define o fundo como branco */
+        border-radius: 25px; /* Adiciona bordas arredondadas de 25px */
+        box-shadow: 0px 0px 10px white; /* Adiciona uma sombra ao redor do container */
+        overflow: hidden; /* Oculta conteúdo que ultrapassar as bordas */
+        position: absolute; /* Posiciona o elemento de forma absoluta */
+        top: 50%; /* Centraliza verticalmente na página */
+        left: 50%; /* Centraliza horizontalmente na página */
+        transform: translate(-50%, -50%); /* Centraliza o elemento exatamente no meio da página */
+        
+        /* ESTILO DO LADO ESQUERDO */
+        & .bem-vindo {
+            flex: 1; /* Ocupa metade da tela (50%) na horizontal */
+            background-color: #20201c; /* Define um fundo escuro */
+            display: flex; /* Usa flexbox para organizar o conteúdo */
+            flex-direction: column; /* Organiza o conteúdo em coluna */
+            align-items: center; /* Centraliza o conteúdo horizontalmente */
+            justify-content: center; /* Centraliza o conteúdo verticalmente */
+            text-align: center; /* Centraliza o texto */
+            padding: 60px; /* Adiciona um espaçamento interno de 60px */
+            
+            & h1 {
+                font-size: 50px; /* Define o tamanho da fonte do título */
+                margin-bottom: 10px; /* Adiciona um espaço inferior de 10px */
+                color: #f8f5f5; /* Define a cor do título como branco suave */
+            }
+            
+            & p {
+                text-align: center; /* Centraliza o texto */
+                font-size: 16px; /* Define o tamanho da fonte do parágrafo */
+                line-height: 1.5; /* Aumenta o espaçamento entre linhas */
+                color: #f8f5f5; /* Define a cor do texto como branco suave */
+            }
+        }
+        /* FIM DO LADO ESQUERDO */
+        /* ESTILO DO LADO DIREITO */
+        & .conteiner {
+            flex: 1; /* Ocupa metade da tela (50%) na horizontal */
+            background-color: #f1ebe3; /* Define a cor de fundo como bege claro */
+            display: flex; /* Usa flexbox para organizar o conteúdo */
+            flex-direction: column; /* Organiza o conteúdo em coluna */
+            justify-content: center; /* Centraliza o conteúdo verticalmente */
+            align-items: center; /* Centraliza o conteúdo horizontalmente */
+            padding: 1px; /* Adiciona um preenchimento mínimo */
+            
+            & h2 {
+                text-align: center; /* Centraliza o título */
+                font-size: 32px; /* Define o tamanho da fonte do título */
+                margin-bottom: 10px; /* Adiciona um espaço inferior de 10px */
+                color: #131619; /* Define a cor do título como escura */
+            }
+            
+            & form {
+                align-items: center; /* Centraliza o conteúdo do formulário */
+                width: 1000%; /* Define uma largura exagerada (aparentemente por erro) */
+                max-width: 300px; /* Limita a largura máxima a 300px */
+                display: flex; /* Usa flexbox para organizar o conteúdo */
+                flex-direction: column; /* Organiza o conteúdo em coluna */
+                gap: 10px; /* Define o espaçamento entre os elementos internos do formulário */
+                
+                & input {
+                    width: 100%; /* Ocupa toda a largura disponível */
+                    max-width: 300px; /* Limita a largura a 300px */
+                    padding: 10px; /* Adiciona preenchimento interno de 10px */
+                    border: none; /* Remove a borda do campo */
+                    background-color: #F5F5F5; /* Define o fundo como cinza claro */
+                    border-radius: 100px; /* Arredonda as bordas */
+                    font-size: 15px; /* Define o tamanho da fonte */
+                }
+            }
+        }
+    
+        & .conect {
+        padding: 25px 0px 10px 0px; /* Define o espaçamento superior e inferior */
+        color: #0a0a0a; /* Define a cor do texto como preto suave */
     }
-
-    /* LADO ESQUERDO */
-
-    & .conteiner {
-        flex: 1 1 50%;
-        min-width: 350px;
+    
+    & h6 {
+        align-self: flex-end; /* Alinha o texto no final do container */
+        font-size: 14px; /* Define o tamanho da fonte */
+        color: #333; /* Define a cor do texto como cinza escuro */
+        margin-top: 0px; /* Remove o espaço superior */
+        margin-bottom: 10px; /* Adiciona um espaço inferior de 10px */
+        margin-right: 0px; /* Remove o espaço à direita */
     }
-
-    & .tela-login .bem-vindo {
-        flex: 1;
-        background-color: #20201c;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 60px;
+    
+    & a {
+        color: inherit; /* Mantém a cor do link como a cor do texto */
+        text-decoration: none; /* Remove a sublinha dos links */
     }
-
-    & .tela-login .bem-vindo h1 {
-        font-size: 50px;
-        margin-bottom: 10px;
-        color: #f8f5f5;
+    
+    & img {
+        justify-content: center; /* Centraliza a imagem */
+        align-items: center; /* Alinha a imagem verticalmente ao centro */
+        height: 30px; /* Define a altura da imagem */
+        padding: 0px 15px; /* Adiciona espaçamento lateral de 15px */
     }
-
-    & .tela-login .bem-vindo p {
-        text-align: center;
-        font-size: 16px;
-        line-height: 1.5;
-        color: #f8f5f5;
+    
+    & button {
+        background-color: #0a0a0a; /* Define a cor de fundo do botão */
+        color: white; /* Define a cor do texto como branco */
+        padding: 10px; /* Define o espaçamento interno do botão */
+        width: 100%; /* Define a largura do botão como 100% */
+        max-width: 300px; /* Limita a largura máxima a 300px */
+        border: none; /* Remove a borda */
+        border-radius: 100px; /* Arredonda as bordas */
+        cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão */
+        font-size: 16px; /* Define o tamanho da fonte */
     }
-
-    /* FIM DO LADO ESQUERDO */
-
-    /* LADO DIREITO */
-    & .tela-login .conteiner {
-        flex: 1;
-        background-color: #f1ebe3;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1px;
-    }
-
-    & .tela-login .conteiner h2 {
-        text-align: center;
-        font-size: 32px;
-        margin-bottom: 10px;
-        color: var(--RafaBlack);
-    }
-
-    & .tela-login .conteiner form {
-        align-items: center;
-        width: 1000%;
-        max-width: 300px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    & input {
-        width: 100%;
-        max-width: 300px;
-        padding: 10px;
-        border: none;
-        background-color: var(--linksWhite);
-        border-radius: 100px;
-        font-size: 15px;
-    }
-
-    & .tela-login .conect {
-        padding: 25px 0px 10px 0px;
-        color: var(--RafaBlack);
-    }
-
-    & .tela-login h6 {
-        align-self: flex-end;
-        font-size: 14px;
-        color: #333;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        margin-right: 0px;
-    }
-
-    & .tela-login a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    & .tela-login img {
-        justify-content: center;
-        align-items: center;
-        height: 30px;
-        padding: 0px 15px 0px 15px;
-    }
-
-    & .tela-login button {
-        padding: 10px;
-        width: 100%;
-        max-width: 300px;
-        background-color: var(--RafaBlack);
-        color: white;
-        border: none;
-        border-radius: 100px;
-        cursor: pointer;
-        font-size: 16px;
-    }
+    /* FIM DO LADO DIREITO */
 }
+}
+/* FIM DA TELA DE LOGIN */
 
-/* FIM DO LADO DIREITO */
-
-/* não mexe, esse media query é do rafa. (heitor) */
-
-/* tentei tornar o login responsível, falhei miserávelmente */
+/* Façam a responsividade aqui */
 @media (max-width: 850px) {
-
+    
     .bem-vindo {
         height: 50px;
-
+        
         p {
             display: none;
         }
-
+        
         .conteiner {
             padding: 10px;
             height: auto;
@@ -581,32 +561,30 @@ principal do 'about' */
     }
 }
 
-/* Façam a responsividade aqui */
-
 /* mobile */
 @media screen and (max-width: 425px) {
-
+    
     header#desktop {
         display: none;
     }
-
+    
     header#mobile {
         display: initial;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        
         background-color: var(--Gunmetal);
         padding: 10px 5px;
-
+        
         & h1 {
             /* h1 junto a "parede" tava feio, coloquei um padding */
             padding-left: 10px;
         }
-
+        
         & nav {
             padding: 2px;
-
+            
             & ul {
                 /* faz nav ficar em linha e sem aparencia de lista */
                 list-style-type: none;
@@ -614,20 +592,20 @@ principal do 'about' */
                 margin: 0px;
                 text-align: center;
                 font-size: large;
-
+                
                 & li {
                     display: inline-flex;
                     margin-right: 15px;
-
+                    
                     & svg {
                         width: 24px;
                     }
-
+                    
                     & a {
                         text-decoration: none;
                         color: var(--SlateGray);
                     }
-
+                    
                     & a:hover {
                         color: var(--WhiteSmoke);
                     }
@@ -635,28 +613,28 @@ principal do 'about' */
             }
         }
     }
-
+    
     main {
         h4 {
             font-size: 150%;
         }
-
+        
         .button-container {
             display: flex;
             flex-direction: column;
         }
     }
-
+    
     .profile {
         display: flex;
         flex-direction: column;
         overflow-x: hidden;
-
+        
         & aside {
             & h1 {
                 margin: 0px;
             }
-
+            
             & .questions {
                 display: none;
             }
@@ -676,3 +654,7 @@ footer {
     text-align: center;
     height: 1.2rem;
 }
+
+cara, deixa assim mesmo então
+deixo é porra, mexeu com meu orgulho
+e olha que eu nem tenho tanto kkkk
