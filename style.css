@@ -218,6 +218,12 @@ main {
     }
 }
 
+.taskSections, .wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+    min-width: 100px;
+}
+
 /* autoexplicativo, div somente pra separar conteúdo 
 principal do 'about' */
 #separador {
