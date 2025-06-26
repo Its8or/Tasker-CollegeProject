@@ -1,0 +1,223 @@
+@import url(/css/responsibles.css);
+
+.wrapper {
+
+    /* ESTILOS DA TELA DE LOGIN */
+    & .tela-login {
+        margin: 0 auto;
+        /* Centraliza horizontalmente o container da tela de login */
+        display: flex;
+        /* Usa o modelo flexbox para organizar os elementos filhos */
+        flex-wrap: nowrap;
+        /* Impede que os elementos filhos quebrem linha */
+        width: 90%;
+        /* Define a largura como 90% da área disponível */
+        max-width: 900px;
+        /* Limita a largura máxima a 900px */
+        height: 90%;
+        /* Define a altura fixa de 450px */
+        background-color: white;
+        /* Define o fundo como branco */
+        border-radius: 25px;
+        /* Adiciona bordas arredondadas de 25px */
+        box-shadow: 0px 0px 10px white;
+        /* Adiciona uma sombra ao redor do container */
+        overflow: hidden;
+        /* Oculta conteúdo que ultrapassar as bordas */
+        position: absolute;
+        /* Posiciona o elemento de forma absoluta */
+        top: 50%;
+        /* Centraliza verticalmente na página */
+        left: 50%;
+        /* Centraliza horizontalmente na página */
+        transform: translate(-50%, -50%);
+        /* Centraliza o elemento exatamente no meio da página */
+
+        /* ESTILO DO LADO ESQUERDO */
+        & .bem-vindo {
+            flex: 1;
+            /* Ocupa metade da tela (50%) na horizontal */
+            background-color: #20201c;
+            /* Define um fundo escuro */
+            display: flex;
+            /* Usa flexbox para organizar o conteúdo */
+            flex-direction: column;
+            /* Organiza o conteúdo em coluna */
+            align-items: center;
+            /* Centraliza o conteúdo horizontalmente */
+            justify-content: center;
+            /* Centraliza o conteúdo verticalmente */
+            text-align: center;
+            /* Centraliza o texto */
+            padding: 60px;
+            /* Adiciona um espaçamento interno de 60px */
+
+            & h1 {
+                font-size: 50px;
+                /* Define o tamanho da fonte do título */
+                margin-bottom: 10px;
+                /* Adiciona um espaço inferior de 10px */
+                color: #f8f5f5;
+                /* Define a cor do título como branco suave */
+            }
+
+            & p {
+                text-align: center;
+                /* Centraliza o texto */
+                font-size: 16px;
+                /* Define o tamanho da fonte do parágrafo */
+                line-height: 1.5;
+                /* Aumenta o espaçamento entre linhas */
+                color: #f8f5f5;
+                /* Define a cor do texto como branco suave */
+            }
+        }
+
+        /* FIM DO LADO ESQUERDO */
+        /* ESTILO DO LADO DIREITO */
+        & .conteiner {
+            flex: 1;
+            /* Ocupa metade da tela (50%) na horizontal */
+            background-color: #f1ebe3;
+            /* Define a cor de fundo como bege claro */
+            display: flex;
+            /* Usa flexbox para organizar o conteúdo */
+            flex-direction: column;
+            /* Organiza o conteúdo em coluna */
+            justify-content: center;
+            /* Centraliza o conteúdo verticalmente */
+            align-items: center;
+            /* Centraliza o conteúdo horizontalmente */
+            padding: 1px;
+            /* Adiciona um preenchimento mínimo */
+
+            & h2 {
+                text-align: center;
+                /* Centraliza o título */
+                font-size: 32px;
+                /* Define o tamanho da fonte do título */
+                margin-bottom: 10px;
+                /* Adiciona um espaço inferior de 10px */
+                color: #131619;
+                /* Define a cor do título como escura */
+            }
+
+            & form {
+                align-items: center;
+                /* Centraliza o conteúdo do formulário */
+                width: 100%;
+                /* Define uma largura exagerada (aparentemente por erro) */
+                max-width: 300px;
+                /* Limita a largura máxima a 300px */
+                display: flex;
+                /* Usa flexbox para organizar o conteúdo */
+                flex-direction: column;
+                /* Organiza o conteúdo em coluna */
+                gap: 10px;
+                /* Define o espaçamento entre os elementos internos do formulário */
+
+                & input {
+                    width: 100%;
+                    /* Ocupa toda a largura disponível */
+                    max-width: 300px;
+                    /* Limita a largura a 300px */
+                    padding: 10px;
+                    /* Adiciona preenchimento interno de 10px */
+                    border: none;
+                    /* Remove a borda do campo */
+                    background-color: #F5F5F5;
+                    /* Define o fundo como cinza claro */
+                    border-radius: 100px;
+                    /* Arredonda as bordas */
+                    font-size: 15px;
+                    /* Define o tamanho da fonte */
+                }
+
+                & button#create_account {
+                    display: none
+                }
+            }
+        }
+
+        & .conect {
+            padding: 25px 0px 10px 0px;
+            /* Define o espaçamento superior e inferior */
+            color: #0a0a0a;
+            /* Define a cor do texto como preto suave */
+        }
+
+        & h6 {
+            align-self: flex-end;
+            /* Alinha o texto no final do container */
+            font-size: 14px;
+            /* Define o tamanho da fonte */
+            color: #333;
+            /* Define a cor do texto como cinza escuro */
+            margin-top: 0px;
+            /* Remove o espaço superior */
+            margin-bottom: 10px;
+            /* Adiciona um espaço inferior de 10px */
+            margin-right: 0px;
+            /* Remove o espaço à direita */
+        }
+
+        & a {
+            color: inherit;
+            /* Mantém a cor do link como a cor do texto */
+            text-decoration: none;
+            /* Remove a sublinha dos links */
+        }
+
+        & img {
+            justify-content: center;
+            /* Centraliza a imagem */
+            align-items: center;
+            /* Alinha a imagem verticalmente ao centro */
+            height: 30px;
+            /* Define a altura da imagem */
+            padding: 0px 15px;
+            /* Adiciona espaçamento lateral de 15px */
+        }
+
+        & button {
+            background-color: #0a0a0a;
+            /* Define a cor de fundo do botão */
+            color: white;
+            /* Define a cor do texto como branco */
+            padding: 10px;
+            /* Define o espaçamento interno do botão */
+            width: 100%;
+            /* Define a largura do botão como 100% */
+            max-width: 300px;
+            /* Limita a largura máxima a 300px */
+            border: none;
+            /* Remove a borda */
+            border-radius: 100px;
+            /* Arredonda as bordas */
+            cursor: pointer;
+            /* Altera o cursor para uma mão ao passar sobre o botão */
+            font-size: 16px;
+            /* Define o tamanho da fonte */
+        }
+
+        /* FIM DO LADO DIREITO */
+    }
+
+    .fundo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.2);
+        }
+    }
+
+}

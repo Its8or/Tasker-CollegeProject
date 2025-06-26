@@ -1,0 +1,130 @@
+@import url(/css/responsibles.css);
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    
+    /* Sidebar */
+    & aside {
+        background-color: #131619;
+        padding: 10px 20px;
+        
+        & h1 {
+            margin-bottom: 10px;
+        }
+        
+    }    
+    
+    
+    /* seção de edição de dados*/
+    & .dataTypes {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 20px;
+        
+        & .inputs {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0px;
+            width: 90%;
+
+            & form {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                
+                & h3 {
+                    padding-top: 5px;
+                }
+                
+                & label {
+                    padding: 5px 0px;
+                    
+                    & p {
+                        & small {
+                            color: var(--SlateGray);
+                            font-size: 15px;
+                        }
+                    }
+                    
+                    & input#name {
+                        background-color: var(--SlateGray);
+                        margin-top: 2px;
+                        border-radius: 20px;
+                        cursor: text;
+                        border: none;
+                    }
+                    
+                    & #birthdate {
+                        background-color: var(--SlateGray);
+                        color: var(--JetBlack);
+                        margin-top: 2px;
+                        border-radius: 25px;
+                        cursor: pointer;
+                        border: none;
+                        height: 15px;
+                    }
+                    
+                    & #profilePicture {
+                        display: grid;
+                        padding: 5px 10px;
+                        cursor: pointer;
+                        
+                        & #profilePicInput {
+                            display: none;
+                        }
+                    }
+                }
+                
+                & img {
+                    height: 100px;
+                    width: 100px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+                
+                & #profilePic {
+                    height: 150px;
+                    width: 150px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+                
+                & .buttons {
+                    display: flex;
+                    cursor: pointer;
+                    border: none;
+                    gap: 10px;
+                    border-radius: 8px;
+                    margin: 5px 0px 0px 0px;
+                    padding: 2px 5px;
+                }
+            }
+        }
+    }
+    
+    .questions {
+        width: 30%;
+        position: fixed;
+        bottom: 30%;
+        right: 100%;
+        padding: 50px 10px 0px 0px;
+        
+        & ul {
+            font-size: 15px;
+            padding: 5px 20px;
+            
+            & li {
+                
+                & a {
+                    text-decoration: none;
+                    color: var(--SlateGray);
+                }
+                
+                & a:hover {
+                    color: var(--WhiteSmoke);
+                }
+            }
+        }
+    }
+}

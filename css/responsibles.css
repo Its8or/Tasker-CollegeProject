@@ -1,0 +1,109 @@
+@import url(/css/responsibles.css);
+
+@media (max-width: 850px) {
+    
+    .bem-vindo {
+        height: 50px;
+        
+        p {
+            display: none;
+        }
+        
+        .conteiner {
+            padding: 10px;
+            height: auto;
+        }
+    }
+    
+    .tela-login {
+        flex-direction: column;
+        height: auto;
+        .conteiner {
+            padding: 10px;
+        }
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 425px) {
+    
+    header#desktop {
+        display: none;
+    }
+    
+    header#mobile {
+        display: initial;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        background-color: var(--Gunmetal);
+        padding: 10px 5px;
+        
+        & h1 {
+            /* h1 junto a "parede" tava feio, coloquei um padding */
+            padding-left: 10px;
+        }
+        
+        & nav {
+            padding: 2px;
+            
+            & ul {
+                /* faz nav ficar em linha e sem aparencia de lista */
+                list-style-type: none;
+                padding: 0px;
+                margin: 0px;
+                text-align: center;
+                font-size: large;
+                
+                & li {
+                    display: inline-flex;
+                    margin-right: 15px;
+                    
+                    & svg {
+                        width: 24px;
+                    }
+                    
+                    & a {
+                        text-decoration: none;
+                        color: var(--SlateGray);
+                    }
+                    
+                    & a:hover {
+                        color: var(--WhiteSmoke);
+                    }
+                }
+            }
+        }
+    }
+    
+    main {
+        h4 {
+            font-size: 150%;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    .profile {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        
+        & aside {
+            & h1 {
+                margin: 0px;
+            }
+            
+            & .questions {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1280px) {}

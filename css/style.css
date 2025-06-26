@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(variables.css);
+
+.georama-fonts {
+    font-family: "Georama", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+* {
+    margin: 0px;
+    font-family: "Georama";
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background-color: var(--JetBlack);
+    color: #e8e4e4;
+}
+
+main,
+.profile {
+    flex: 1;
+}
+
+main {
+    padding: 20px 10px 0px 10px;
+
+    & #create-task {
+        background-color: var(--Gunmetal);
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0px;
+
+        & .message {
+
+            padding: 10px 10px 0px 0px;
+
+            & #content {
+                padding: 0px 0px 0px 10px;
+                overflow: scroll;
+
+            }
+
+            /* under-message faz referencia aos botões 
+            em baixo do input de criar tarefas */
+            & #under-message {
+                padding-top: 3px;
+
+                & input {
+                    border-radius: 30px;
+                    padding: 3px;
+                    margin-top: 2px;
+                    text-align: center;
+                    border: none;
+                }
+            }
+        }
+
+        /* #content é o input para criar tarefas */
+        & #content {
+            width: 100%;
+            height: 25px;
+            border-radius: 20px;
+            border: none;
+            resize: none;
+            overflow: hidden;
+        }
+
+        /* inputs são os botões Adicionar e Cancelar */
+        & .inputs {
+            display: flex;
+
+            margin: 5px 0px 0px 0px;
+            gap: 10px;
+
+            & button {
+                border: none;
+                border-radius: 8px;
+                padding: 2px 5px;
+            }
+        }
+    }
+
+    /* Css para Tarefas Atuais */
+    & #on-going {
+        background-color: var(--Gunmetal);
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0px;
+        overflow: hidden;
+
+        & #head-tasks {
+            /* dispõe 'Tarefas Atuais' e filtro
+            de tarefas em linha única */
+            display: flex;
+            gap: 5px;
+            justify-content: space-between;
+        }
+
+        & #filter-tasks {
+            border-radius: 20px;
+        }
+
+        & #task-ongoing {
+            display: grid;
+            width: 100%;
+
+            .task-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border-bottom: 1px solid var(--linksWhite);
+            }
+
+            .task {
+                word-break: break-all
+            }
+
+            .button-container {
+                display: flex;
+                gap: 10px;
+                /* Espaço entre os botões */
+            }
+
+            .task-button {
+                border-radius: 20px;
+                padding: 2px 7px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.taskSections,
+.wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+    min-width: 100px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /* Seção para HOME em index.html */
+    & .about {
+
+        background-color: var(--Gunmetal);
+        margin: 10px;
+        padding: 10px 20px 10px 10px;
+        border-radius: 10px;
+
+        h3 {
+            border-bottom: solid 2px gray;
+        }
+
+        & p {
+            padding-left: 10px;
+        }
+
+        & .how-to-use {
+            margin: 10px 0px 10px 0px;
+        }
+
+        ol {
+            margin: 5px 0 5px 0;
+
+            li {
+                margin: 2px 0 2px 0;
+            }
+        }
+
+        #GotoTasks {
+            background-color: black;
+            color: whitesmoke;
+            border: solid 2px var(--RafaBlack);
+            border-radius: 25px;
+            padding: 5px 10px 5px 10px;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .about-group {
+            blockquote {
+                padding: 10px 20px;
+                font-style: italic
+            }
+        }
+    }
+}
+
+/* FIM DA TELA DE LOGIN */
+
+footer {
+    background-color: var(--Gunmetal);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 1.2rem;
+}

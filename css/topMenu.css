@@ -1,0 +1,48 @@
+@import url(/css/responsibles.css);
+
+header {
+    /* faz menu e nome do site na mesma linha */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*  */
+    
+    background-color: var(--Gunmetal);
+    padding: 10px 5px;
+    
+    &#mobile {
+        display: none;
+    }
+    
+    & h1 {
+        /* h1 junto a "parede" tava feio, coloquei um padding */
+        padding-left: 10px;
+    }
+    
+    & nav {
+        padding: 2px;
+        
+        & ul {
+            /* faz nav ficar em linha e sem aparencia de lista */
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            text-align: center;
+            font-size: large;
+
+            & li {
+                display: inline-flex;
+                margin-right: 15px;
+                
+                & a {
+                    text-decoration: none;
+                    color: var(--SlateGray);
+                }
+                
+                & a:hover {
+                    color: var(--WhiteSmoke);
+                }
+            }
+        }
+    }
+}
