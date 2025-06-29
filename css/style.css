@@ -41,35 +41,37 @@ main,
 }
 
 main {
-    padding: 20px 10px 0px 10px;
+    padding: 20px 0px;
 
     & #create-task {
         background-color: var(--Gunmetal);
         border-radius: 10px;
         padding: 10px;
-        margin: 10px 0px;
 
         & .message {
-
-            padding: 10px 10px 0px 0px;
+            margin: 10px 10px 0 0;
 
             & #content {
-                padding: 0px 0px 0px 10px;
+                padding: 0 0 0 10px;
                 overflow: scroll;
-
             }
 
             /* under-message faz referencia aos botões 
             em baixo do input de criar tarefas */
-            & #under-message {
-                padding-top: 3px;
+            & #message-buttons {
+                display: flex;
+                margin: 5px 0 0 5px;
+                justify-content: space-between;
 
                 & input {
                     border-radius: 30px;
                     padding: 3px;
-                    margin-top: 2px;
                     text-align: center;
                     border: none;
+                }
+
+                #due-date {
+                    cursor: pointer;
                 }
             }
         }
@@ -87,14 +89,14 @@ main {
         /* inputs são os botões Adicionar e Cancelar */
         & .inputs {
             display: flex;
-
             margin: 5px 0px 0px 0px;
             gap: 10px;
-
+            
             & button {
                 border: none;
                 border-radius: 8px;
                 padding: 2px 5px;
+                cursor: pointer;
             }
         }
     }
@@ -111,12 +113,14 @@ main {
             /* dispõe 'Tarefas Atuais' e filtro
             de tarefas em linha única */
             display: flex;
-            gap: 5px;
             justify-content: space-between;
         }
 
         & #filter-tasks {
             border-radius: 20px;
+            padding: 2px;
+            border: none;
+            cursor: pointer;
         }
 
         & #task-ongoing {
@@ -127,7 +131,8 @@ main {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 10px;
+                margin: 10px 0 0 2px;
+                padding-bottom: 5px;
                 border-bottom: 1px solid var(--linksWhite);
             }
 
@@ -151,11 +156,10 @@ main {
     }
 }
 
-.taskSections,
-.wrapper {
+.taskSections{
     margin: 0 auto;
     max-width: 600px;
-    min-width: 100px;
+    min-width: 50px;
 }
 
 .wrapper {
