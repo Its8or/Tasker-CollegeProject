@@ -60,17 +60,16 @@ main {
             em baixo do input de criar tarefas */
             & #message-buttons {
                 display: flex;
-                margin: 5px 0 0 5px;
                 justify-content: space-between;
+                margin-top: 5px;
+                margin-right: -10px;
 
+                /*date input*/
                 & input {
-                    border-radius: 30px;
+                    border-radius: 20px;
                     padding: 3px;
                     text-align: center;
                     border: none;
-                }
-
-                #due-date {
                     cursor: pointer;
                 }
             }
@@ -89,13 +88,12 @@ main {
         /* inputs são os botões Adicionar e Cancelar */
         & .inputs {
             display: flex;
-            margin: 5px 0px 0px 0px;
-            gap: 10px;
-            
+            gap: 5px;
+
             & button {
                 border: none;
-                border-radius: 8px;
-                padding: 2px 5px;
+                border-radius: 20px;
+                padding: 2px 7px;
                 cursor: pointer;
             }
         }
@@ -124,39 +122,49 @@ main {
         }
 
         & #task-ongoing {
-            display: grid;
             width: 100%;
 
-            .task-item {
+            .taskTemplate {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin: 10px 0 0 2px;
                 padding-bottom: 5px;
                 border-bottom: 1px solid var(--linksWhite);
-            }
 
-            .task {
-                word-break: break-all
-            }
+                .taskFullContent {
+                    display: inherit;
+                    flex-direction: row;
+                    
+                    .taskContent {
+                        width: 150px;
+                        padding-left: 5px;
+                        word-wrap:break-word;
+                    }
+                    
+                    .taskDate{
+                        background-color: whitesmoke;
+                        color: black;
+                        margin: 0 0 0 50px ;
+                        padding: 0 5px;
+                        border-radius: 20px;
+                        height: fit-content;
+                    }
+                }
 
-            .button-container {
-                display: flex;
-                gap: 10px;
-                /* Espaço entre os botões */
-            }
-
-            .task-button {
-                border-radius: 20px;
-                padding: 2px 7px;
-                border: none;
-                cursor: pointer;
+                .taskButtonBoxContent {
+                    border-radius: 20px;
+                    margin: 0 0 0 3px;
+                    padding: 2px 7px;
+                    border: none;
+                    cursor: pointer;
+                }
             }
         }
     }
 }
 
-.taskSections{
+.taskSections {
     margin: 0 auto;
     max-width: 600px;
     min-width: 50px;

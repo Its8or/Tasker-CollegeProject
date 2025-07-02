@@ -1,64 +1,81 @@
-// Obtém referências aos elementos HTML para facilitar a manipulação no JavaScript
-const contentInput = document.getElementById('content'); // Entrada para o conteúdo da tarefa (campo de texto)
-const dueDateInput = document.getElementById('due-date'); // Entrada para a data de vencimento da tarefa
-const taskOngoingDiv = document.getElementById('task-ongoing'); // Div onde as tarefas em andamento serão exibidas
-const filterTasksSelect = document.getElementById('filter-tasks'); // Select para filtrar as tarefas (concluídas, pendentes, todas)
+const contentInput = document.getElementById('content'); // conteúdo da tarefa (campo de texto)
+const dueDateInput = document.getElementById('due-date'); // data de vencimento da tarefa
+const taskOngoingDiv = document.getElementById('task-ongoing'); // Div de exibição de tarefas
+const filterTasksSelect = document.getElementById('filter-tasks'); // filtro para filtrar as tarefas (concluídas, pendentes, todas)
 
-// Função para carregar as tarefas do localStorage e exibi-las na página
+const currentDate = new Date(); // get data atual
+
 function loadTasks() {
     // Obtém as tarefas salvas no localStorage ou um array vazio caso não exista
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    // Para cada tarefa, cria um elemento visual na página
     tasks.forEach(createTaskElement);
 }
 
-// Função para criar e exibir um elemento visual para cada tarefa
+// Testa se data não é anterior a "hoje"
+function checkDate(date) {
+    return (date > currentDate) ? true : false;
+}
+
 function createTaskElement({ content, dueDate, completed = false }) {
-    // Cria uma div para a tarefa
-    const taskDiv = document.createElement('div');
-    taskDiv.className = 'task-item'; // Atribui a classe CSS 'task-item' à div da tarefa
+    const task = document.createElement('div');
+    const taskComplete = document.createElement('div');
+    const taskContent = document.createElement('div');
+    const dateContent = document.createElement('div');
+    const buttonBox = document.createElement('div');
+    const fullContent = document.createElement('div'); // junta taskContent + dateContent;
 
-    // Cria um texto que mostra o conteúdo da tarefa e a data de vencimento (se houver)
-    const dueDateText = dueDate ? ` - Vencimento: ${dueDate}` : ''; // Se houver data de vencimento, exibe a string correspondente
+    const dueDateContent = dueDate; // Se houver: Cria data de vencimento
 
-    // Cria um span para o conteúdo da tarefa
-    const taskSpan = document.createElement('span');
-    taskSpan.className = 'task'; // Atribui a classe CSS 'task' ao span
-    taskSpan.style.textDecoration = completed ? 'line-through' : ''; // Se a tarefa estiver concluída, aplica o texto com linha cortada
-    taskSpan.textContent = `${content}${dueDateText}`; // Atribui o conteúdo e a data de vencimento ao texto do span
-    taskDiv.appendChild(taskSpan); // Adiciona o span à div da tarefa
+    fullContent.appendChild(taskComplete);
+    fullContent.appendChild(taskContent);
+    fullContent.appendChild(dateContent);
 
-    // Cria um container para os botões de ação da tarefa (Concluir, Editar, Remover)
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'button-container'; // Atribui a classe CSS 'button-container' ao container de botões
+    // set content and style of TaskComplete. (Check icon)
+    taskComplete.style.visibility = 'hidden';
+    taskComplete.innerHTML = '✓';
 
-    // Cria os três botões: Concluir, Editar e Remover
+    // set class names to elements
+    task.className = 'taskTemplate';
+    fullContent.className = 'taskFullContent'
+    taskContent.className = 'taskContent';
+    dateContent.className = 'taskDate'
+    buttonBox.className = 'taskButtonBox';
+
+    taskContent.textContent = `${content}`;
+    dateContent.textContent = `${dueDateContent}`;
+
     ['Concluir', 'Editar', 'Remover'].forEach(text => {
-        const button = document.createElement('button'); // Cria um botão
-        button.classList.add('task-button'); // Atribui a classe CSS 'task-button' ao botão
-        button.textContent = text; // Define o texto do botão
+        const button = document.createElement('button');
 
-        // Define o comportamento de cada botão com base no seu texto
+        button.classList.add('taskButtonBoxContent'); // Atribui a classe CSS 'task-button' ao botão
+        button.textContent = text; // Define o conteúdo do botão
+        
         button.onclick = text === 'Concluir' ? () => {
-            taskSpan.style.textDecoration = 'line-through'; // Marca a tarefa como concluída (adiciona a linha)
-            updateTask(content, true); // Atualiza a tarefa no localStorage como concluída
-            button.disabled = true; // Desabilita o botão de concluir após ser clicado
+            updateTask(content, true); 
+            button.disabled = true; 
+            
         } : text === 'Editar' ? () => {
             // Preenche os campos de edição com os dados da tarefa
+            
             contentInput.value = content;
             dueDateInput.value = dueDate;
             removeTask(content); // Remove a tarefa da lista antes de editar
         } : () => {
-            // Remove a tarefa da página e do localStorage
-            taskOngoingDiv.removeChild(taskDiv); 
+            // Remove a tarefa
+            taskOngoingDiv.removeChild(task);
             removeTask(content);
         };
 
-        buttonContainer.appendChild(button); // Adiciona o botão ao container de botões
+        buttonBox.appendChild(button); // Adiciona o botão ao container de botões
     });
 
-    taskDiv.appendChild(buttonContainer); // Adiciona o container de botões à div da tarefa
-    taskOngoingDiv.appendChild(taskDiv); // Adiciona a div da tarefa à div principal na página
+    // stylization
+    completed ? taskComplete.style.visibility = 'initial' : '' ;
+
+    // appending
+    task.appendChild(fullContent);
+    task.appendChild(buttonBox);
+    taskOngoingDiv.appendChild(task);
 }
 
 // Função para atualizar o status ou adicionar uma nova tarefa no localStorage
@@ -67,7 +84,7 @@ function updateTask(content, completed) {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     // Encontra o índice da tarefa com o mesmo conteúdo
     const index = tasks.findIndex(task => task.content === content);
-    
+
     // Se a tarefa já existir, atualiza seu status de conclusão
     if (index !== -1) {
         tasks[index].completed = completed;
@@ -126,12 +143,10 @@ document.getElementById('add-item').onclick = () => {
 
 // Evento disparado quando o botão de cancelar é clicado
 document.getElementById('cancel-item').onclick = () => {
-    contentInput.value = ''; // Limpa o campo de conteúdo
-    dueDateInput.value = ''; // Limpa o campo de data de vencimento
+    contentInput.value = ''; // Limpa conteúdo
+    dueDateInput.value = ''; // Limpa data de vencimento
 };
 
-// Evento disparado quando o filtro de tarefas é alterado
 filterTasksSelect.onchange = filterTasks;
 
-// Carrega as tarefas ao carregar a página
 loadTasks();
