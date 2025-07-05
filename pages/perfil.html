@@ -57,29 +57,24 @@
 
     <div class="wrapper">
         <div class="profile">
-            <!-- aqui onde é onde aparece o perfil -->
             <aside>
                 <h1>Perfil do Usuário</h1>
             </aside>
+
             <div class="dataTypes">
                 <h2>Editar Dados</h2>
                 <div class="inputs">
-                <!-- Início do formulário de edição de dados do usuário -->    
                     <form>
-                 <!-- Campo exibindo o e-mail do usuário -->        
                         <p><strong>Email:</strong> <span id="email">carregando...</span></p>
-                 <!-- Campo de entrada para o nome do usuário -->       
                         <label>
                             <p>Nome: <small>(evite caracteres especiais)</small></p>
                             <input type="text" id="name" />
                         </label>
-                    <!-- Campo de entrada para a data de nascimento do usuário -->    
                         <label>
                             <p>Data de Nascimento:</p>
                             <input type="date" id="birthdate" />
                         </label>
                     </form>
-                <!-- Botões para salvar as alterações ou fazer logout -->
                     <div class="buttons">
                         <button onclick="saveUserData()">Salvar</button>
                         <button onclick="logout()">Logout</button>
@@ -88,7 +83,6 @@
                 </div>
             </div>
             <div class="questions">
-            <!-- Seção de perguntas frequentes para ajudar o usuário -->    
                 <p>Perguntas frequentes:</p>
                 <ul>
                     <li><a href="#">como usar o gerenciador?</a></li>
