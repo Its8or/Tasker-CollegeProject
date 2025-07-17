@@ -11,7 +11,7 @@ A basic to-do list site to keep track of your needs;
 - CSS3;
 - JS.
 
-### 💛 Be a Colaborator:
+## 💛 Be a Colaborator:
 Have an idea for the site? Feel free to make a colaboration with us.
 If so, follow the steps:
 1. Fork the project;
