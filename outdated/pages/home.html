@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" />
+    <title>TASKER | HOME</title>
+</head>
+
+<body>
+    <header id="desktop">
+        <h1>TASKER</h1>
+        <nav>
+            <!-- abas de navegação -->
+            <ul>
+                <li id="hometab"><a href="/pages/home.html">HOME</a></li>
+                <li id="task"><a href="/index.html">TASKS</a></li>
+                <li id="profileTab"><a href="/pages/perfil.html">PERFIL</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+
+        <article class="why-a-todo-list">
+            <div class="about-why-a-todo-list-container">
+                <h2 id="about-why-a-todo-list-header">Porque fizemos o Tasker?</h2>
+                <div id="horizontal-line"></div>
+            </div>
+            <p>
+                Implementar uma <i>to-do list</i> é um desafio que testa os conhecimentos em programação de estudantes
+                iniciantes.
+                Mesmo que não seja inovador, a proposta ainda se mantem interessante.
+            </p>
+        </article>
+
+        <section class="how-to-use">
+            <h3>Como Usar</h3>
+
+            <article class="steps-how-to">
+                <ol>
+                    <article>
+                        <li>Vá para a sessão de Tasks.</b></li>
+                        <p>
+                            clique no botão, <button id="GotoTasks" onclick="gotoTasks()">Gerenciador de Tarefas</button>
+                            ou na Aba TASKS no topo da página à direita.
+                        </p>
+                    </article>
+
+                    <article>
+                        <li>Crie uma tarefa.</b></li>
+                        <p>
+                            Na tela inicial, insira os dados nos campos desejados e confirme a atividade.
+                        </p>
+                    </article>
+
+                    <article>
+                        <li>Organize suas tarefas.</b></li>
+                        <p> Defina datas limite para suas tarefas. Acompanhe o progresso. <br>
+                            Defina status: "pendente", "em andamento" ou "concluídas".
+                        </p>
+                    </article>
+
+                    <article>
+                        <li>Filtre o que for importante.</b></li>
+                        <p>Use os filtros para visualizar as tarefas como:</p>
+                        <ul>
+                            <li>Não iniciadas;</li>
+                            <li>Em andamento;</li>
+                            <li>Concluídas;</li>
+                        </ul>
+                    </article>
+                </ol>
+            </article>
+        </section>
+    </section>
+    <footer>
+        <h6>© todos os direitos reservados aos criadores.</h6>
+    </footer>
+
+    <script>
+        function gotoTasks() {
+            window.location.href = "/index.html";
+        }
+    </script>
+
+</body>
+
+</html>
