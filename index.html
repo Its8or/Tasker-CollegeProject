@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css" media="screen" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/favicons/favicon-512x512.png">
+    <title>TASKER</title>
+    <script src="/javascript/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>TASKER reworked</h1>
+    </header>
+
+    <main>
+        <section class="inputTask">
+            <section class="createTaskSectionHeader">
+                <h4>CREATE TASK</h4>
+            </section>
+            <form class="inputTaskInfo">
+                <input type="text" placeholder="Enter task info..." name="tittleTask" id="tittleTask" required>
+                <section id="optionsTask">
+                    <input type="date" maxlength="01/01/2100" name="dueTask" id="dueTask">
+                    <div class="createTaskButtons">
+                        <button type="reset" id="cancelButton">Cancel</button>
+                        <button type="submit" id="submitButton" onclick="submitTask()">Send</button>
+                    </div>
+                </section>
+            </form>
+        </section>
+
+        <section class="viewTasks">
+            <section class="ViewTasksSectionHeader">
+                <h4>TASKS</h4>
+                <div class="viewFilter">
+                    <label for="taskStatus" id="taskStatusLabel">Task Filter:</label>
+                    <select name="taskStatus" id="taskStatus">
+                        <option value="any">-</option>
+                        <option value="todo">To do</option>
+                        <option value="done">Done</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="viewItens">
+
+                <template class="templateTaskItem">
+                    <section class="groupMarkerContent">
+
+                        <div class="bookmarks">
+                            <img src="/images/svgs/bookmark-regular-full.svg" alt="" class="bookmark-unchecked">
+                            <img src="/images/svgs/bookmark-solid-full.svg" alt="" class="bookmark-checked">
+                        </div>
+
+                        <article class="content">
+                            <p class="contentTittleTask">TASK_NAME</p>
+                            <div class="content-tags">
+                                <p class="statusTagTask">task_status</p>
+                                <p class="dateTagTask">data_stamp</p>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="viewTaskButtons">
+                        <button type="button" class="stateTaskButton">✔️</button>
+                        <button type="button" class="editTaskButton">✏️</button>
+                        <button type="button" class="deleteTaskButton">🗑️</button>
+                    </section>
+                </template>
+
+                <div class="tasksList"></div>
+
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+:root {
+    --backgroundColor: #0c4a68;
+    --sections: #0f3344;
+    --color: seagreen;
+    --effect: seagreen;
+    --input: greenyellow;
+
+    --sendTask: '';
+    --completeTask: '';
+    --delTask: '';
+    --editTask: '';
+
+    --tagTodo: '';
+    --tagDone: '';
+
+    /* ruler */
+    --margin: 10px;
+}
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100hw;
+    height: 100hw;
+    /* just for better view */
+    background-color: var(--backgroundColor);
+    color: var(--color);
+    font-family: consolas;
+}
+
+header {
+    background-color: var(--sections);
+    padding: 15px 10px;
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Styles the 'Create Task' and 'View Tasks' sections. */
+.inputTask,
+.viewTasks {
+    background-color: var(--sections);
+    padding: 20px;
+    margin: var(--margin);
+    border-radius: 15px;
+    min-width: 350px;
+    width: 50vw;
+}
+
+/* Top Section of Create Task (Only Tittle) */
+.createTaskSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px var(--color) solid;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    font-size: larger;
+}
+
+/* Clear the default focus outline */
+input:focus,
+select:focus {
+    outline: none;
+}
+
+/* Makes the 'tittle Task' input of 'Create Task' section occupy the entire blank space */
+.inputTaskInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Styles the 'task tittle' input */
+#tittleTask {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--backgroundColor);
+    color: var(--input);
+    box-shadow: 0 0 5px black inset;
+}
+
+/* Apply custom style to placeholder of 'task tittle' */
+#tittleTask::placeholder {
+    color: var(--input);
+}
+
+/* Makes the date and submit Task button occupy the blank space */
+#optionsTask {
+    display: inherit;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Change the mouse type when mouse hovers over all buttons */
+#dueTask,
+#taskStatus,
+button {
+    cursor: pointer;
+}
+
+/* Change style fo date input */
+#dueTask {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--backgroundColor);
+    color: var(--input);
+    box-shadow: 0 0 5px black inset;
+}
+
+/* Changes all buttons default style */
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--backgroundColor);
+    color: var(--input);
+    box-shadow: 0 0 3px var(--effect);
+}
+
+/* Changes all buttons default style (When clicked) */
+button:active {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--backgroundColor);
+    color: var(--input);
+    box-shadow: 0 0 3px black inset;
+    
+}
+
+/* Top Section of Task View (includes title and filter) */
+.ViewTasksSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px var(--color) solid;
+    padding: 5px 0 5px 0;
+    font-size: large;
+    position: sticky;
+    background-color: var(--sections);
+    top: 0;
+}
+
+.viewFilter{
+    display: flex;
+    align-self: center;
+    justify-items: center;
+}
+
+/* Task Filter: All(-), To do, Complete */
+#taskStatus {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--backgroundColor);
+    color: var(--input);
+    box-shadow: 0 0 3px black inset;
+}
+
+/* switch from class(.) to id(#) later*/
+.templateTaskItem {
+    display: none;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px var(--color) solid;
+    align-items: center;
+    margin: 0 2px;
+}
+
+/* fixes 'onFocusTaskMarker' and 'Content' display */
+.groupMarkerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.bookmarks {
+    display: contents;
+}
+
+/* Styles for Bookmark icons */
+.bookmark-unchecked, .bookmark-checked{
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+
+/* Redefines the margin of the 'content' section for better styling. */
+.content p {
+    margin: 0;
+}
+
+/* Styles 'Task Tittle' on 'View Tasks' Section */
+.contentTittleTask {
+    color: var(--color);
+    margin-bottom: 3px;
+}
+
+/* Styles tags of Task in 'View Tasks' Section (Date) */
+.content-tags {
+    display: flex;
+    font-size: small;
+    gap: 6px;
+    color: var(--effect);
+    font-weight: bold;
+}
+
+.dateTagTask,
+.statusTagTask {
+    background-color: var(--backgroundColor);
+    padding: 4px;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.dateTagTask:empty {
+    display: none;
+}
+
+.statusTagTask::before {
+    content: "#";
+}
+
+.viewTaskButtons {
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+}
