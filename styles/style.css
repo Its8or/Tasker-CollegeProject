@@ -4,12 +4,10 @@
     --color: #f8fafc;
     --effect: #6366f1;
     --input: #e2e8f0;
-
-    --sendTask: #334155;       /* Slate escuro destacando do fundo, com contraste sutil */
-    --completeTask: #10b981;   /* Emerald/Verde (Ação de conclusão/sucesso) */
-    --editTask: #3b82f6;       /* Blue/Azul (Ação de modificação) */
+    --sendTask: #334155;
+    --completeTask: #10b981;
+    --editTask: #3b82f6;
     --delTask: #ef4444;
-
     --tagTodo: #fbbf24;
     --tagDone: #34d399;
 
