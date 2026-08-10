@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="images/favicons/favicon-512x512.png">
     <title>TASKER</title>
-    <script src="/javascript/main.js" defer></script>
+    <script src="javascript/main.js" defer></script>
 </head>
 
 <body>
@@ -27,10 +27,10 @@
             <form class="inputTaskInfo">
                 <input type="text" placeholder="Enter task info..." name="tittleTask" id="tittleTask" required>
                 <section id="optionsTask">
-                    <input type="date" maxlength="01/01/2100" name="dueTask" id="dueTask">
+                    <input type="date" name="dueTask" id="dueTask">
                     <div class="createTaskButtons">
                         <button type="reset" id="cancelButton">Cancel</button>
-                        <button type="submit" id="submitButton" onclick="submitTask()">Send</button>
+                        <button type="submit" id="submitButton">Send</button>
                     </div>
                 </section>
             </form>
@@ -55,8 +55,8 @@
                     <section class="groupMarkerContent">
 
                         <div class="bookmarks">
-                            <img src="/images/svgs/bookmark-regular-full.svg" alt="" class="bookmark-unchecked">
-                            <img src="/images/svgs/bookmark-solid-full.svg" alt="" class="bookmark-checked">
+                            <img src="images/svgs/bookmark-regular-full.svg" alt="" class="bookmark-unchecked">
+                            <img src="images/svgs/bookmark-solid-full.svg" alt="" class="bookmark-checked">
                         </div>
 
                         <article class="content">
