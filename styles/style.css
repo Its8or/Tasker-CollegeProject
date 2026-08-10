@@ -1,17 +1,17 @@
 :root {
-    --backgroundColor: #0c4a68;
-    --sections: #0f3344;
-    --color: seagreen;
-    --effect: seagreen;
-    --input: greenyellow;
+    --backgroundColor: #0f172a;
+    --sections: #1e293b;
+    --color: #f8fafc;
+    --effect: #6366f1;
+    --input: #e2e8f0;
 
-    --sendTask: '';
-    --completeTask: '';
-    --delTask: '';
-    --editTask: '';
+    --sendTask: #334155;       /* Slate escuro destacando do fundo, com contraste sutil */
+    --completeTask: #10b981;   /* Emerald/Verde (Ação de conclusão/sucesso) */
+    --editTask: #3b82f6;       /* Blue/Azul (Ação de modificação) */
+    --delTask: #ef4444;
 
-    --tagTodo: '';
-    --tagDone: '';
+    --tagTodo: #fbbf24;
+    --tagDone: #34d399;
 
     /* ruler */
     --margin: 10px;
@@ -29,9 +29,6 @@ html {
 body {
     padding: 0;
     margin: 0;
-    width: 100hw;
-    height: 100hw;
-    /* just for better view */
     background-color: var(--backgroundColor);
     color: var(--color);
     font-family: consolas;
@@ -138,10 +135,24 @@ button:active {
     border: none;
     border-radius: 5px;
     padding: 5px;
-    background-color: var(--backgroundColor);
+    opacity: 50%;
     color: var(--input);
     box-shadow: 0 0 3px black inset;
-    
+}
+
+.stateTaskButton {
+    background-color: var(--completeTask);
+    color: #ffffff;
+}
+
+.editTaskButton {
+    background-color: var(--editTask);
+    color: #ffffff;
+}
+
+.deleteTaskButton {
+    background-color: var(--delTask);
+    color: #ffffff;
 }
 
 /* Top Section of Task View (includes title and filter) */
