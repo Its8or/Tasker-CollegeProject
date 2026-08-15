@@ -28,7 +28,7 @@ A aplicação permite ao usuário criar, organizar, filtrar e gerenciar suas tar
 
 - ➕ **Criação de Tarefas:** Adicione novas tarefas com título, descrição, prazo e prioridade.
 - ✏️ **Edição e Remoção:** Atualize as informações de tarefas existentes ou remova tarefas concluídas.
-- ✅ **Status de Conclusão:** Marque tarefas como pendentes, em andamento ou concluídas.
+- ✅ **Status de Conclusão:** Marque tarefas como pendentes ou concluídas.
 - 🔍 **Filtros e Busca:** Encontre rapidamente tarefas por categoria, status ou prioridade.
 - 🎯 **Ações Rápidas:** Botões interativos para alteração rápida de status, exclusão e edição.
 - 📱 **Design Responsivo:** Adaptado para diferentes tamanhos de tela (mobile e desktop).
@@ -80,7 +80,7 @@ Apenas um navegador web moderno (Google Chrome, Firefox, Edge ou Safari) e o Git
 
 1. **Clonar o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/Tasker-CollegeProject.git
+   git clone https://github.com/its8or/Tasker-CollegeProject.git
    ```
 
 2. **Acessar o diretório do projeto:**
